@@ -122,12 +122,12 @@ class RichMenuController extends Controller
         $err = curl_error($curl);
         $richmenu = substr($response,15,41);
         $curl = curl_init();
-        
-        echo "-+-+-+-+-+-+-+-+-+-";
-        echo $data;
+
 
         
         $data = fopen ($dataFile, 'r');
+        echo "-+-+-+-+-+-+-+-+-+-";
+        echo implode("/",$dataFile);;
         $size=filesize ($dataFile);
         $contents= fread ($data, $size);
         fclose ($data);
