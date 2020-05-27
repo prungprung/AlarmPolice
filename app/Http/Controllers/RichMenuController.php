@@ -14,7 +14,7 @@ class RichMenuController extends Controller
     }
     public function RichMenu($context){
         if($context =="login"){
-          $dataFile = '/image/linerichmenu_3_.jpeg';
+          $dataFile = '../image/linerichmenu_3_.jpeg';
           $data =  [
             "size"=> [
               "width"=> 2500,
