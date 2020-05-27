@@ -127,7 +127,7 @@ class RichMenuController extends Controller
         
         $data = fopen ($dataFile, 'r');
         echo "-+-+-+-+-+-+-+-+-+-";
-        echo implode(" ",$dataFile);
+        echo implode(" ",$data);
 
         $size=filesize ($dataFile);
         $contents= fread ($data, $size);
