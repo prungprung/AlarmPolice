@@ -33,7 +33,7 @@ class RichMenuController extends Controller
                 ],
                 "action"=> [
                   "type"=> "uri",
-                  "uri"=> "http://127.0.0.0.1:8000/sendrichmenu/nonlogin"
+                  "uri"=> "http://intense-scrubland-71413.herokuapp.com/public/sendrichmenu/nonlogin"
                 ]
               ],
               [
@@ -45,13 +45,13 @@ class RichMenuController extends Controller
                 ],
                 "action"=> [
                   "type"=> "uri",
-                  "uri"=> "http://127.0.0.0.1:8000/sendrichmenu/nonlogin"
+                  "uri"=> "http://intense-scrubland-71413.herokuapp.com/public/sendrichmenu/nonlogin"
                 ]
               ]
             ]
                 ];
         }else{
-          $dataFile = 'C:\Users\User\AlarmPolice\public\image\linerichmenu_1_.jpeg';
+          $dataFile = 'http://intense-scrubland-71413.herokuapp.com\public\image\linerichmenu_1_.jpeg';
           $data = [
             "size"=> [
               "width"=> 2500,
