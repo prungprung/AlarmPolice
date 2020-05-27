@@ -14,7 +14,7 @@ class RichMenuController extends Controller
     }
     public function RichMenu($context){
         if($context =="login"){
-          $dataFile = '/public/image/linerichmenu_3_.jpeg';
+          $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
           $data =  [
             "size"=> [
               "width"=> 2500,
