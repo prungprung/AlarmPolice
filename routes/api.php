@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::middleware('auth:api')->get('/sendrichmenu/{context}','RichMenuController@RichMenu');
+Route::middleware('auth:api')->get('/sendrichmenu/{context}','RichMenu');
 Route::middleware('auth:api')->get('/sendriff','LiffLineController@Liff');
 Route::middleware('auth:api')->get('/sendtext','TextMessageLineController@TextMessageLine');
 Route::middleware('auth:api')->get('/sendflex','FlexLineController@Flex');
