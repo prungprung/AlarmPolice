@@ -126,7 +126,9 @@ class RichMenuController extends Controller
 
         
         $data = fopen ($dataFile, 'r');
-        $size=filesize ($dataFile);
+        $headers  = get_headers($filename, 1);
+        // $size=filesize ($dataFile);
+        $size = $headers['Content-Length'];
         $contents= fread ($data, $size);
         fclose ($data);
         $encoded = base64_encode($contents);
