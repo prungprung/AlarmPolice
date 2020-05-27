@@ -170,6 +170,6 @@ class RichMenuController extends Controller
 
     $response = curl_exec($curl);
     $err = curl_error($curl);
-        // return redirect('/defaultview');
+        return redirect('/defaultview');
         }
     }
