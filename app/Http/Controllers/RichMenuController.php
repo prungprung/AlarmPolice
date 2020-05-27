@@ -122,6 +122,9 @@ class RichMenuController extends Controller
         $err = curl_error($curl);
         $richmenu = substr($response,15,41);
         $curl = curl_init();
+        
+        echo "-+-+-+-+-+-+-+-+-+-";
+        echo $data;
 
         
         $data = fopen ($dataFile, 'r');
@@ -167,6 +170,6 @@ class RichMenuController extends Controller
 
     $response = curl_exec($curl);
     $err = curl_error($curl);
-        return redirect('/defaultview');
+        // return redirect('/defaultview');
         }
     }
