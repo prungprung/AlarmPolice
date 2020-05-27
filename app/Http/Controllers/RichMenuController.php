@@ -14,7 +14,7 @@ class RichMenuController extends Controller
     }
     public function RichMenu($context){
         if($context =="login"){
-          $dataFile = 'C:\Users\User\AlarmPolice\public\image\linerichmenu_3_.jpeg';
+          $dataFile = 'http://intense-scrubland-71413.herokuapp.com/publicpublic/image/linerichmenu_3_.jpeg';
           $data =  [
             "size"=> [
               "width"=> 2500,
@@ -51,7 +51,7 @@ class RichMenuController extends Controller
             ]
                 ];
         }else{
-          $dataFile = 'http://intense-scrubland-71413.herokuapp.com\public\image\linerichmenu_1_.jpeg';
+          $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_1_.jpeg';
           $data = [
             "size"=> [
               "width"=> 2500,
@@ -82,7 +82,7 @@ class RichMenuController extends Controller
                 ],
                 "action"=> [
                   "type"=> "uri",
-                  "uri"=> "http://127.0.0.0.1:8000/sendrichmenu/login"
+                  "uri"=> "http://intense-scrubland-71413.herokuapp.com/public/sendrichmenu/login"
                 ]
               ],
               [
@@ -94,7 +94,7 @@ class RichMenuController extends Controller
                 ],
                 "action"=> [
                   "type"=> "uri",
-                  "uri"=> "http://127.0.0.0.1:8000/sendrichmenu/nonlogin"
+                  "uri"=> "http://intense-scrubland-71413.herokuapp.com/public/sendrichmenu/nonlogin"
                 ]
               ]
             ]
