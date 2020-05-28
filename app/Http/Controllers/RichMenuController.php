@@ -82,7 +82,7 @@ class RichMenuController extends Controller
                 ],
                 "action"=> [
                   "type"=> "uri",
-                  "uri"=> "http://intense-scrubland-71413.herokuapp.com/public/sendrichmenu/login"
+                  "uri"=> "https://liff.line.me/1654272826-Og8LnyZ6"
                 ]
               ],
               [
