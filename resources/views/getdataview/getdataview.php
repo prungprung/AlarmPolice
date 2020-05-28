@@ -49,9 +49,7 @@
                     liff.login()
                 }
             })
-            await liff.init({
-                liffId: "1654272826-Og8LnyZ6"
-            })
+            await liff.init({liffId: "1654272826-Og8LnyZ6"})
         }
         main()
     </script>
