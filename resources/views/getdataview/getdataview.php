@@ -47,10 +47,10 @@
                 },
                 dataType: "json",
                 success: function(data) {
-                    alert("success")
+                    console.log("success")
                 },
                 fail: function(data) {
-                    alert("error")
+                    console.log("error")
                 },
             });
         }
