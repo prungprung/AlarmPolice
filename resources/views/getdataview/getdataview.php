@@ -36,6 +36,10 @@
             displayName = profile.displayName;
             utouId = liff.getContext().utouId;
             accessToken = liff.getAccessToken();
+            console.log(userid);
+            console.log(displayName);
+            console.log(utouId);
+            console.log(accessToken);
         }
         async function main() {
             liff.ready.then(() => {
