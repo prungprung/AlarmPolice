@@ -19,6 +19,12 @@
             liff.closeWindow()
         }
 
+        function openWindow() {
+            liff.openWindow({
+                url: "www.google.com",
+                external: true
+            })
+        }
         var userid;
         var displayName;
         var decodedIDToken;
@@ -41,17 +47,16 @@
                 dataType: "json",
                 success: function(data) {
                     alert("success")
-                }
+                },
+                fail: function(data) {
+                    alert("error")
+                },
             });
         }
         async function main() {
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    liff.openWindow({
-                    url: "www.google.com",
-                    external: true
-            })
                 } else {
                     liff.login()
                 }
