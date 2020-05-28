@@ -13,9 +13,10 @@ class LiffLineController extends Controller
     public function Liff(Request $request)
     {
         $postbody = $request->data;
+        echo  $postbody; 
         // app('App\Http\Controllers\RichMenuController')->RichMenu("login");
         // app('App\Http\Controllers\RichMenuController')->setUserId($postbody->userId);
         // app('App\Http\Controllers\RichMenuController')->setAccessToken($postbody->accessToken);
-        return view("/defaultview/showvalue", compact('postbody'));
+        // return view("/defaultview/showvalue", compact('postbody'));
     }
 }
