@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<?php dd($array); ?>
+<?php dd($postbody); ?>
 </body>
 
 </html>
