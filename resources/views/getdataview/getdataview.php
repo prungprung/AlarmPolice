@@ -40,29 +40,19 @@
             console.log(displayName);
             console.log(utouId);
             console.log(accessToken);
-        }
-        async function main() {
-            const profile = await liff.getProfile()
-            liff.ready.then(() => {
-                getdata();
-                var json = {
+            var json = {
                     "userId": profile.userId,
                     "displayName": liff.getContext().utouId,
                     "utouId": liff.getContext().utouId,
                     "accessToken": liff.getAccessToken()
                 }
                 console.log(json);
-
+        }
+        async function main() {
+            liff.ready.then(() => {
+                getdata();
                 if (liff.isLoggedIn()) {
-                    // $.ajax({
-                    //     type: "GET",
-                    //     url: "/senddata",
-                    //     data: {'data' : json},
-                    //     dataType: "json",
-                    //     success: function(data) {
-                    //         alert("success")
-                    //     }
-                    // });
+                    
                 } else {
                     liff.login()
                 }
