@@ -12,6 +12,7 @@ class RichMenuController extends Controller
   public function _construct()
   {
   }
+  
   public function RichMenu($context)
   {
     if ($context == "login") {
