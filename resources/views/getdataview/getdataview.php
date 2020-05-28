@@ -27,7 +27,7 @@
 
      function main() {
       liff.ready.then(() => {
-        const profile = await liff.getProfile()
+        var profile = await liff.getProfile()
         document.getElementById("isLoggedIn").append(liff.isLoggedIn())
         var json = {"userId": profile.userId,
                     "displayName":profile.displayName,
