@@ -140,7 +140,7 @@
           liff.login()
         }
       })
-      await liff.init({ liffId: "YOUR-LIFF-ID" })
+      await liff.init({ liffId: "1654272826-Og8LnyZ6" })
     }
     main()
   </script>
