@@ -24,7 +24,7 @@ Route::get('/sendflex','FlexLineController@Flex');
 Route::get('/sendnotify','NotifyController@Notify');
 Route::get('/sendrichmenu/{context}','RichMenuController@RichMenu');
 // Route::get('/sendriff','LiffLineController@Liff');
-Route::post('/senddata','FlexLineController@Liff');
+Route::get('/senddata','FlexLineController@Liff');
 Route::get('/sendriff', function(){
     return view('getdataview/getdataview');
 });
