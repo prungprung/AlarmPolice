@@ -32,9 +32,10 @@ class RichMenuController extends Controller
   }
   public function RichMenu($context)
   {
-    echo $this->getUserId();
-    echo $this->getAccessToken();
+   
     if ($context == "login") {
+      echo $this->getUserId();
+      echo $this->getAccessToken();
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [
