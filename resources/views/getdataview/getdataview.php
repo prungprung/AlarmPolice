@@ -54,6 +54,7 @@
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
+                    window.location.href = 'www.google.com';
                 } else {
                     liff.login()
                 }
