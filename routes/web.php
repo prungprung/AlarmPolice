@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/defaultview', function () {
     return view('defaultview/defaultview');
 });
+Route::get('/showvalue', function () {
+    return view('defaultview/showvalue');
+});
 Route::get('/sendriff', function(){
     return view('getdataview/getdataview');
 });
