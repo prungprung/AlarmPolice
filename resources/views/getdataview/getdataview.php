@@ -46,16 +46,18 @@
                     "utouId": utouId,
                     "accessToken": accessToken
                 }
+                console.log(json);
+
                 if (liff.isLoggedIn()) {
-                    $.ajax({
-                        type: "GET",
-                        url: "/senddata",
-                        data: {'data' : json},
-                        dataType: "json",
-                        success: function(data) {
-                            alert("success")
-                        }
-                    });
+                    // $.ajax({
+                    //     type: "GET",
+                    //     url: "/senddata",
+                    //     data: {'data' : json},
+                    //     dataType: "json",
+                    //     success: function(data) {
+                    //         alert("success")
+                    //     }
+                    // });
                 } else {
                     liff.login()
                 }
