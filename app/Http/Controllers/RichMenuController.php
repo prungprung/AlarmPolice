@@ -125,16 +125,16 @@ class RichMenuController extends Controller
     $richmenu = substr($response, 15, 41);
     $curl = curl_init();
 
-
-
-    $data = fopen($dataFile, 'r');
-    $headers  = get_headers($dataFile, 1);
-    // $size=filesize ($dataFile);
-    $size = $headers['Content-Length'];
-    $contents = fread($data, $size);
-    fclose($data);
-    $encoded = base64_encode($contents);
-    echo $encoded;
+    $imagelink = file_get_contents('http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_1_.jpeg');
+    $encoded = base64_encode($imagelink);
+    // $data = fopen($dataFile, 'r');
+    // $headers  = get_headers($dataFile, 1);
+    // // $size=filesize ($dataFile);
+    // $size = $headers['Content-Length'];
+    // $contents = fread($data, $size);
+    // fclose($data);
+    // $encoded = base64_encode($contents);
+  
     curl_setopt_array($curl, array(
       CURLOPT_URL => "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content",
       CURLOPT_RETURNTRANSFER => true,

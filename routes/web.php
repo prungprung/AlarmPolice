@@ -26,5 +26,5 @@ Route::get('/sendrichmenu/{context}','RichMenuController@RichMenu');
 // Route::get('/sendriff','LiffLineController@Liff');
 Route::get('/senddata','LiffLineController@Liff');
 Route::get('/sendriff', function(){
-    return view('getdataview/getdataview');
+    return view('defaultview/showvalue');
 });
