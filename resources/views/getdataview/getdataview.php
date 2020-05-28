@@ -24,8 +24,8 @@
                 external: true
             })
         }
+        const profile = await liff.getProfile()
         async function main() {
-            const profile = await liff.getProfile()
             liff.ready.then(() => {
                 document.getElementById("isLoggedIn").append(liff.isLoggedIn())
                 var json = {
