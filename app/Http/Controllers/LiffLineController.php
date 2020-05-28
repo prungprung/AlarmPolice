@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FlexLineController extends Controller
+class LiffLineController extends Controller
 {
 
     public function _construct()
