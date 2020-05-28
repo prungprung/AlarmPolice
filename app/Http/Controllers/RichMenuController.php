@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+$userIds = "";
+$accessToken = "";
+
 use Illuminate\Http\Request;
 use LINE\LINEBot\HTTPClient\CurlHTTPClient;
 use LINE\LINEBot;
@@ -9,12 +12,30 @@ use LINE\LINEBot;
 class RichMenuController extends Controller
 {
 
+
   public function _construct()
   {
   }
-
+  public function setUserId($userid)
+  {
+    $this->userid = $userid;
+  }
+  function getUserId()
+  {
+    return $this->userid;
+  }
+  public function setAccessToken($accessToken)
+  {
+    $this->accessToken = $accessToken;
+  }
+  function getAccessToken()
+  {
+    return $this->accessToken;
+  }
   public function RichMenu($context)
   {
+    echo $this->getUserId();
+    echo $this->getAccessToken();
     if ($context == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
@@ -161,6 +182,6 @@ class RichMenuController extends Controller
 
     $response = curl_exec($curl);
     $err = curl_error($curl);
-    return redirect('/defaultview');
+    // return redirect('/defaultview');
   }
 }

@@ -19,12 +19,11 @@ Route::get('/', function () {
 Route::get('/defaultview', function () {
     return view('defaultview/defaultview');
 });
+Route::get('/sendriff', function(){
+    return view('getdataview/getdataview');
+});
 Route::get('/sendtext','TextMessageLineController@TextMessageLine');
 Route::get('/sendflex','FlexLineController@Flex');
 Route::get('/sendnotify','NotifyController@Notify');
 Route::get('/sendrichmenu/{context}','RichMenuController@RichMenu');
-// Route::get('/sendriff','LiffLineController@Liff');
 Route::get('/senddata','LiffLineController@Liff');
-Route::get('/sendriff', function(){
-    return view('getdataview/getdataview');
-});
