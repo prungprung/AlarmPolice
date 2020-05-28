@@ -9,5 +9,4 @@
 <body>
 <?php dd($postbody); ?>
 </body>
-
 </html>
