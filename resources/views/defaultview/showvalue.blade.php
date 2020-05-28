@@ -7,7 +7,10 @@
 </head>
 
 <body>
-<p>{{$postbody}}</p>
+<p>{{ $postbody->userId }}</p>
+<p>{{ $postbody->displayName }}</p>
+<p>{{ $postbody->accessToken }}</p>
+<?php dd($array); ?>
 </body>
 
 </html>
