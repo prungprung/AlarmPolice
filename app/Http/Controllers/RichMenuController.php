@@ -127,7 +127,6 @@ class RichMenuController extends Controller
 
     $imagelink = file_get_contents($dataFile);
     $encoded = base64_encode($imagelink);
-  
     curl_setopt_array($curl, array(
       CURLOPT_URL => "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content",
       CURLOPT_RETURNTRANSFER => true,
