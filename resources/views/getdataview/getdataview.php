@@ -24,16 +24,29 @@
                 external: true
             })
         }
-        const profile = await liff.getProfile()
+        var userid;
+        var displayName;
+        var decodedIDToken;
+        var utouId;
+        var accessToken;
+        async function getdata() {
+            const profile = await liff.getProfile()
+            userid = profile.userId;
+            displayName = profile.displayName;
+            decodedIDToken = liff.getDecodedIDToken().email;
+            utouId = liff.getContext().utouId;
+            accessToken = liff.getAccessToken();
+        }
         async function main() {
             liff.ready.then(() => {
                 document.getElementById("isLoggedIn").append(liff.isLoggedIn())
+                getdata();
                 var json = {
-                    "userId": profile.userId,
-                    "displayName": profile.displayName,
-                    "decodedIDToken": liff.getDecodedIDToken().email,
-                    "utouId": liff.getContext().utouId,
-                    "accessToken": liff.getAccessToken()
+                    "userId": userid,
+                    "displayName": displayName,
+                    "decodedIDToken": decodedIDToken,
+                    "utouId": utouId,
+                    "accessToken": accessToken
                 }
                 if (liff.isLoggedIn()) {
                     $.ajax({
@@ -49,7 +62,9 @@
                     liff.login()
                 }
             })
-            await liff.init({liffId: "1654272826-Og8LnyZ6"})
+            await liff.init({
+                liffId: "1654272826-Og8LnyZ6"
+            })
         }
         main()
     </script>
