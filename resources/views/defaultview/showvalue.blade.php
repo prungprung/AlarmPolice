@@ -7,9 +7,6 @@
 </head>
 
 <body>
-<p>{{ $postbody->userId }}</p>
-<p>{{ $postbody->displayName }}</p>
-<p>{{ $postbody->accessToken }}</p>
 <?php dd($array); ?>
 </body>
 
