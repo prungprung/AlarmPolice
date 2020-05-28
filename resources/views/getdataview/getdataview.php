@@ -19,12 +19,6 @@
             liff.closeWindow()
         }
 
-        function openWindow() {
-            liff.openWindow({
-                url: "https://line.me",
-                external: true
-            })
-        }
         var userid;
         var displayName;
         var decodedIDToken;
@@ -54,7 +48,10 @@
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    window.location.replace('www.google.com');
+                    liff.openWindow({
+                    url: "www.google.com",
+                    external: true
+            })
                 } else {
                     liff.login()
                 }
