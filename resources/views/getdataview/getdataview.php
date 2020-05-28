@@ -42,13 +42,14 @@
             console.log(accessToken);
         }
         async function main() {
+            const profile = await liff.getProfile()
             liff.ready.then(() => {
                 getdata();
                 var json = {
-                    "userId": userid,
-                    "displayName": displayName,
-                    "utouId": utouId,
-                    "accessToken": accessToken
+                    "userId": profile.userId,
+                    "displayName": liff.getContext().utouId,
+                    "utouId": liff.getContext().utouId,
+                    "accessToken": liff.getAccessToken()
                 }
                 console.log(json);
 
