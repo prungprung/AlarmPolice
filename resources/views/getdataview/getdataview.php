@@ -48,7 +48,7 @@
                 }
                 if (liff.isLoggedIn()) {
                     $.ajax({
-                        type: "POST",
+                        type: "GET",
                         url: "/senddata",
                         data: json,
                         dataType: "json",
