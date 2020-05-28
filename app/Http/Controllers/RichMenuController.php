@@ -12,7 +12,7 @@ class RichMenuController extends Controller
   public function _construct()
   {
   }
-  
+
   public function RichMenu($context)
   {
     if ($context == "login") {
@@ -134,7 +134,7 @@ class RichMenuController extends Controller
     $contents = fread($data, $size);
     fclose($data);
     $encoded = base64_encode($contents);
-
+    echo $encoded;
     curl_setopt_array($curl, array(
       CURLOPT_URL => "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content",
       CURLOPT_RETURNTRANSFER => true,
@@ -172,6 +172,6 @@ class RichMenuController extends Controller
 
     $response = curl_exec($curl);
     $err = curl_error($curl);
-    return redirect('/defaultview');
+    // return redirect('/defaultview');
   }
 }
