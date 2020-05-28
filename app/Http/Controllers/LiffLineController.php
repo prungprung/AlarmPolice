@@ -15,6 +15,8 @@ class LiffLineController extends Controller
         if (count($request->json()->all())) {
             $postbody = $request->json()->all();
             print_r($postbody) ;
+            return View('defarutview/showvalue')->with('postbody',$postbody);
+            
         }
     }
    
