@@ -32,7 +32,7 @@
         var accessToken;
         async function getdata() {
             const profile = await liff.getProfile()
-            
+
             var json = {
                 "userId": profile.userId,
                 "displayName": profile.displayName,
@@ -58,8 +58,12 @@
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
+                    closed();
                 } else {
                     liff.login()
+                    if (liff.isLoggedIn()) {
+                        closed();
+                    }
                 }
             })
             await liff.init({
