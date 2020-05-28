@@ -33,7 +33,6 @@
             const profile = await liff.getProfile()
             userid = profile.userId;
             displayName = profile.displayName;
-            decodedIDToken = liff.getDecodedIDToken().email;
             utouId = liff.getContext().utouId;
             accessToken = liff.getAccessToken();
         }
@@ -43,7 +42,6 @@
                 var json = {
                     "userId": userid,
                     "displayName": displayName,
-                    "decodedIDToken": decodedIDToken,
                     "utouId": utouId,
                     "accessToken": accessToken
                 }
