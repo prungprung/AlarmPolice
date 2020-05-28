@@ -32,10 +32,10 @@
         var accessToken;
         async function getdata() {
             const profile = await liff.getProfile()
+            
             var json = {
                 "userId": profile.userId,
                 "displayName": profile.displayName,
-                "utouId": liff.getContext().utouId,
                 "accessToken": liff.getAccessToken()
             }
             $.ajax({
