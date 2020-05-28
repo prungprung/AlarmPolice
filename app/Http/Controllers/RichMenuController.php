@@ -103,7 +103,6 @@ class RichMenuController extends Controller
       ];
     }
 
-
     $curl = curl_init();
     curl_setopt_array($curl, array(
       CURLOPT_URL => "https://api.line.me/v2/bot/richmenu",
@@ -125,8 +124,6 @@ class RichMenuController extends Controller
     $richmenu = substr($response, 15, 41);
     $curl = curl_init();
 
-    $imagelink = file_get_contents($dataFile);
-    $encoded = base64_encode($imagelink);
     curl_setopt_array($curl, array(
       CURLOPT_URL => "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content",
       CURLOPT_RETURNTRANSFER => true,
@@ -136,7 +133,7 @@ class RichMenuController extends Controller
       CURLOPT_FOLLOWLOCATION => true,
       CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
       CURLOPT_CUSTOMREQUEST => "POST",
-      CURLOPT_POSTFIELDS => $encoded,
+      CURLOPT_POSTFIELDS => file_get_contents($dataFile),
       CURLOPT_HTTPHEADER => array(
         "Authorization: Bearer mCJv5+R/NzahU6FczR8quazO0HpzsjHUhj8ygOptTepkz4VLY7GJ25ZY/IbmT0zCliv4ryqsdstJkJ2XaAKleH10Oor5/RfLWvWpZ8G5Z85xlABpWumYnTsfMYToaiaiK9k5wBEHiyWpR+xATHtY/QdB04t89/1O/w1cDnyilFU=",
         "Content-Type: image/jpeg"
