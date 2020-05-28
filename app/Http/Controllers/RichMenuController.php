@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-$userIds = "";
-$accessToken = "";
 
 use Illuminate\Http\Request;
 use LINE\LINEBot\HTTPClient\CurlHTTPClient;
@@ -11,8 +9,8 @@ use LINE\LINEBot;
 
 class RichMenuController extends Controller
 {
-
-
+  public $userId = "";
+  public $accessToken = "";
   public function _construct()
   {
   }
