@@ -13,7 +13,7 @@ class LiffLineController extends Controller
     }
     public function Liff(Request $request){
             $postbody = $request->json()->all();
-            return view('defarutview/showvalue')->compact('postbody');
+            return view('defaultview/showvalue')->compact('postbody');
     }
    
 }
