@@ -38,7 +38,7 @@
                 "displayName": profile.displayName,
                 "accessToken": liff.getAccessToken()
             }
-            dd(json)
+            console.log(json)
             $.ajax({
                 type: "GET",
                 url: "/senddata",
