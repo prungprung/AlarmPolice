@@ -39,7 +39,6 @@
         }
         async function main() {
             liff.ready.then(() => {
-                document.getElementById("isLoggedIn").append(liff.isLoggedIn())
                 getdata();
                 var json = {
                     "userId": userid,
