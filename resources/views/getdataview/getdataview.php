@@ -58,7 +58,7 @@
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    openWindow();
+                    // openWindow();
                     // closed();
                 } else {
                     liff.login()
