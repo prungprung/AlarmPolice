@@ -12,7 +12,7 @@ class LiffLineController extends Controller
 
     }
     public function Liff(Request $request){
-            $postbody = $request->json;
+            $postbody = $request->data;
             print_r($request);
             print_r("\n");
             print_r($postbody);

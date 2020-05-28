@@ -50,7 +50,7 @@
                     $.ajax({
                         type: "GET",
                         url: "/senddata",
-                        data: json,
+                        data: {'data' : json},
                         dataType: "json",
                         success: function(data) {
                             alert("success")
