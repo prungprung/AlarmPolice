@@ -9,11 +9,10 @@ class LiffLineController extends Controller
 
     public function _construct()
     {
-
     }
-    public function Liff(Request $request){
-            $postbody = $request->data;
-            return view("/sendrichmenu/{context}",compact('postbody'));
+    public function Liff(Request $request)
+    {
+        $postbody = $request->data;
+        app('App\Http\Controllers\RichMenuController')->RichMenu("login");
     }
-   
 }
