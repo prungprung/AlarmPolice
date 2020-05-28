@@ -7,7 +7,7 @@
 </head>
 
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
     <script>
         function logOut() {
@@ -32,27 +32,28 @@
         var accessToken;
         async function getdata() {
             const profile = await liff.getProfile()
-            userid = profile.userId;
-            displayName = profile.displayName;
-            utouId = liff.getContext().utouId;
-            accessToken = liff.getAccessToken();
-            console.log(userid);
-            console.log(displayName);
-            console.log(utouId);
-            console.log(accessToken);
             var json = {
-                    "userId": profile.userId,
-                    "displayName": liff.getContext().utouId,
-                    "utouId": liff.getContext().utouId,
-                    "accessToken": liff.getAccessToken()
+                "userId": profile.userId,
+                "displayName": profile.displayName,
+                "utouId": liff.getContext().utouId,
+                "accessToken": liff.getAccessToken()
+            }
+            $.ajax({
+                type: "GET",
+                url: "/senddata",
+                data: {
+                    'data': json
+                },
+                dataType: "json",
+                success: function(data) {
+                    alert("success")
                 }
-                console.log(json);
+            });
         }
         async function main() {
             liff.ready.then(() => {
-                getdata();
                 if (liff.isLoggedIn()) {
-                    
+                    getdata();
                 } else {
                     liff.login()
                 }
