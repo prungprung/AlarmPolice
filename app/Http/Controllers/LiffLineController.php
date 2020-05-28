@@ -13,7 +13,7 @@ class LiffLineController extends Controller
     }
     public function Liff(Request $request){
             $postbody = $request->data;
-            return view('defaultview/showvalue',compact('postbody'));
+            return view("/sendrichmenu/{context}",compact('postbody'));
     }
    
 }
