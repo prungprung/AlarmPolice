@@ -53,7 +53,7 @@ class RichMenuController extends Controller
             ],
             "action" => [
               "type" => "uri",
-              "uri" => "https://liff.line.me/1654272826-Rw6k9XEd"
+              "uri" => "https://liff.line.me/1654272826-Rw6k9XEd" 
             ]
           ],
           [
@@ -160,14 +160,10 @@ class RichMenuController extends Controller
 
     $response = curl_exec($curl);
     curl_close($curl);
-    // if($context == 'login'){
-    //   $urlType = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
-    // }else{
-    //     $urlType = "https://api.line.me/v2/bot/user/all/richmenu/" . $richmenu;
-    // }
     $curl = curl_init();
-    curl_setopt_array($curl, array(
-      CURLOPT_URL => "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/".$richmenu,
+        curl_setopt_array($curl, array(
+      CURLOPT_URL => "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1
+      164bda3145c/richmenu/".$richmenu,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,
@@ -180,7 +176,6 @@ class RichMenuController extends Controller
         "authorization: Bearer mCJv5+R/NzahU6FczR8quazO0HpzsjHUhj8ygOptTepkz4VLY7GJ25ZY/IbmT0zCliv4ryqsdstJkJ2XaAKleH10Oor5/RfLWvWpZ8G5Z85xlABpWumYnTsfMYToaiaiK9k5wBEHiyWpR+xATHtY/QdB04t89/1O/w1cDnyilFU=",
       ),
     ));
-
     $response = curl_exec($curl);
     $err = curl_error($curl);
     // return redirect('/defaultview');

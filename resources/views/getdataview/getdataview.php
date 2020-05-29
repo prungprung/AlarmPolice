@@ -7,6 +7,11 @@
 </head>
 
 <body>
+
+
+<p>user</p><input type="text"></input>
+<p>password</p><input type="text"></input>
+<input type="button" value="login"></input>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
     <script>
