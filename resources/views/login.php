@@ -23,9 +23,6 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
 </div><br>
 <div class="center-button"><input type="button" value="login" onclick="submits()"></input></div>
 </div>
-<p id="accessToken"><b>AccessToken:</b> </p>
-  <p id="userId"><b>userId:</b> </p>
-  <p id="displayName"><b>displayName:</b> </p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
