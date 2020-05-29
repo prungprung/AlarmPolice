@@ -52,7 +52,6 @@
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    location.href = 'https://www.youtube.com'
                     // closed();
                 } else {
                     liff.login()
@@ -61,6 +60,7 @@
                     }
                 }
             })
+            location.href = 'https://www.youtube.com'
             await liff.init({
                 liffId: "1654272826-Og8LnyZ6"
             })
