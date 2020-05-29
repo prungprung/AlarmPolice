@@ -7,15 +7,18 @@
 </head>
 <style>
 .center{
-    margin-left: 40%;
+    margin-left: 24%;
+    margin-top: 95%;
 }
 </style>
 <body>
 
 <div class="center">
-<p>user</p><input type="text"></input>
-<p>password</p><input type="text"></input>
-<input type="button" value="login" onclick="closed()"></input>
+<div>
+user: <input type="text"></input>
+password: <input type="text"></input>
+</div>
+<div><input type="button" value="login" onclick="closed()"></input></div>
 </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
