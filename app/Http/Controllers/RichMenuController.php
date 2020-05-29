@@ -34,7 +34,6 @@ class RichMenuController extends Controller
   {
    
     if ($context == "login") {
-      $urlToUser = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/";
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [
@@ -72,7 +71,6 @@ class RichMenuController extends Controller
         ]
       ];
     } else {
-      $urlToUser = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/";
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_1_.jpeg';
       $data = [
         "size" => [
@@ -167,6 +165,11 @@ class RichMenuController extends Controller
     }else{
         $urlType = "https://api.line.me/v2/bot/user/all/richmenu/" . $richmenu;
     }
+    echo "-------";
+    echo "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content";
+    echo "-------";
+    echo $urlType;
+    exit();
     $curl = curl_init();
     curl_setopt_array($curl, array(
       CURLOPT_URL => $urlType,
