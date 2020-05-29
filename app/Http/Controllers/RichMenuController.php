@@ -160,19 +160,19 @@ class RichMenuController extends Controller
 
     $response = curl_exec($curl);
     curl_close($curl);
-    if($context == 'login'){
-      $urlType = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
-    }else{
-        $urlType = "https://api.line.me/v2/bot/user/all/richmenu/" . $richmenu;
-    }
-    echo "-------";
-    echo "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content";
-    echo "-------";
-    echo $urlType;
+    // if($context == 'login'){
+    //   $urlType = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
+    // }else{
+    //     $urlType = "https://api.line.me/v2/bot/user/all/richmenu/" . $richmenu;
+    // }
+    // echo "-------";
+    // echo "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content";
+    // echo "-------";
+    // echo $urlType;
     exit();
     $curl = curl_init();
     curl_setopt_array($curl, array(
-      CURLOPT_URL => $urlType,
+      CURLOPT_URL => "https://api.line.me/v2/bot/user/all/richmenu/" . $richmenu,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,
