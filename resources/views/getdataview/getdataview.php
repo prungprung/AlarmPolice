@@ -21,7 +21,7 @@
 
         function openWindow() {
             liff.openWindow({
-                url: "/senddata",
+                url: "/defaultview",
                 external: true
             })
         }
@@ -58,7 +58,7 @@
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    // closed();
+                    openWindow();
                 } else {
                     liff.login()
                     if (liff.isLoggedIn()) {
