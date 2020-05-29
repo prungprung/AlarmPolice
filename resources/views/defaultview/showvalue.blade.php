@@ -10,7 +10,7 @@
 <div>
   <p>Taken from wikpedia</p>
    {{
-       dd($postbody);
+       dd($postbody)
    }}
 </div>
 </body>
