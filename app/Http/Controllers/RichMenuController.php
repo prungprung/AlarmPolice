@@ -136,15 +136,14 @@ class RichMenuController extends Controller
         "content-type: application/json"
       ),
     ));
-
+    // https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/richmenu-818d92776b6bd7b6d042388b7a7cefbb
+    // "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content"
     $response = curl_exec($curl);
     $err = curl_error($curl);
     $richmenu = substr($response, 15, 41);
     $curl = curl_init();
-    echo $richmenu;
-    exit();
     curl_setopt_array($curl, array(
-      CURLOPT_URL => "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content",
+      CURLOPT_URL =>  "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/".$richmenu,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,
