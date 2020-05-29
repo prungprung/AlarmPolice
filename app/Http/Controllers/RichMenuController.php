@@ -33,7 +33,7 @@ class RichMenuController extends Controller
   public function RichMenu($context)
   {
    
-    if ($context == "login") {
+    if ($context != "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [
