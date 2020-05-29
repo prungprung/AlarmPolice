@@ -163,6 +163,7 @@ class RichMenuController extends Controller
 
     }
     echo $context;
+    echo "77";
     exit();
   
     curl_close($curl);
