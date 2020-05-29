@@ -52,9 +52,9 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
                 "displayName": profile.displayName,
                 "accessToken": liff.getAccessToken()
             }
-            document.getElementById('accessToken').append(profile.userId);
-                    document.getElementById('userId').append(profile.displayName);
-                    document.getElementById('displayName').append(liff.getAccessToken());
+                    document.getElementById('userId').append(profile.userId);
+                    document.getElementById('displayName').append(profile.displayName);
+                    document.getElementById('accessToken').append(liff.getAccessToken());
             console.log(json);
             $.ajax({
                 type: "GET",
