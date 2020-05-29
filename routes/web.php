@@ -34,6 +34,9 @@ Route::get('/car', function(){
 Route::get('/carblacklist', function(){
     return view('findCarBlackList');
 });
+Route::get('/login', function(){
+    return view('login');
+});
 Route::get('/sendtext','TextMessageLineController@TextMessageLine');
 Route::get('/sendflex','FlexLineController@Flex');
 Route::get('/sendnotify','NotifyController@Notify');
