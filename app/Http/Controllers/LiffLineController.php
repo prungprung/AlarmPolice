@@ -14,9 +14,8 @@ class LiffLineController extends Controller
     {
         $postbody = $request->data;
         $tests = $postbody['userId'];
-        // app('App\Http\Controllers\RichMenuController')->RichMenu("login");
-        // app('App\Http\Controllers\RichMenuController')->setUserId($postbody->userId);
-        // app('App\Http\Controllers\RichMenuController')->setAccessToken($postbody->accessToken);
-        return view("/defaultview/showvalue", compact('tests',));
+        app('App\Http\Controllers\RichMenuController')->RichMenu("login");
+        app('App\Http\Controllers\RichMenuController')->setUserId($postbody['userId']);
+        app('App\Http\Controllers\RichMenuController')->setAccessToken($postbody['accessToken']);
     }
 }
