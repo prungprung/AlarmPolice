@@ -22,7 +22,6 @@
         function openWindow() {
             liff.openWindow({
                 url: "/defaultview",
-                external: true
             })
         }
         var userid;
