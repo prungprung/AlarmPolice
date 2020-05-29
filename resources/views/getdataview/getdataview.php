@@ -10,15 +10,18 @@
     margin-left: 24%;
     margin-top: 95%;
 }
+.center-button{
+    padding-left: 24%;
+}
 </style>
 <body>
 
 <div class="center">
 <div>
-user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></input>
-password: <input type="text"></input>
-</div>
-<div><input type="button" value="login" onclick="closed()"></input></div>
+user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></input><br>
+password: <input type="text"></input><br>
+</div ><br>
+<div class="center-button"><input type="button" value="login" onclick="closed()"></input></div>
 </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
