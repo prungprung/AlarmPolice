@@ -52,7 +52,8 @@
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    closed();
+                    location.href = 'https://www.youtube.com'
+                    // closed();
                 } else {
                     liff.login()
                     if (liff.isLoggedIn()) {
