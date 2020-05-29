@@ -102,7 +102,7 @@ class RichMenuController extends Controller
             ],
             "action" => [
               "type" => "uri",
-              "uri" => "https://liff.line.me/1654272826-Og8LnyZ6"
+              "uri" => "http://intense-scrubland-71413.herokuapp.com/public/login"
             ]
           ],
           [
