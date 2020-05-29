@@ -141,7 +141,8 @@ class RichMenuController extends Controller
     $err = curl_error($curl);
     $richmenu = substr($response, 15, 41);
     $curl = curl_init();
-
+    echo $richmenu;
+    exit();
     curl_setopt_array($curl, array(
       CURLOPT_URL => "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content",
       CURLOPT_RETURNTRANSFER => true,

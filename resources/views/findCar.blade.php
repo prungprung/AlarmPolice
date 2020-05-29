@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td>1</td>
-                <td><a href="/car">4คค1</a></td>
+                <td>4คค1</td>
                 <td>Toyota</td>
                 <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ"/></td>
             </tr>
