@@ -36,6 +36,7 @@ function submits(){
     
 }
 function closed() {
+            window.close() ;
             liff.closeWindow()
         }
         async function main() {
