@@ -25,6 +25,9 @@ Route::get('/showvalue', function () {
 Route::get('/sendriff', function(){
     return view('getdataview/getdataview');
 });
+Route::get('/info', function(){
+    return view('info1');
+});
 Route::get('/sendtext','TextMessageLineController@TextMessageLine');
 Route::get('/sendflex','FlexLineController@Flex');
 Route::get('/sendnotify','NotifyController@Notify');

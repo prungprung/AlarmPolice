@@ -19,11 +19,6 @@
             liff.closeWindow()
         }
 
-        function openWindow() {
-            liff.openWindow({
-                url: "/defaultview",
-            })
-        }
         var userid;
         var displayName;
         var decodedIDToken;
@@ -57,11 +52,11 @@
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    openWindow();
+                    closed();
                 } else {
                     liff.login()
                     if (liff.isLoggedIn()) {
-                        // closed();
+                        closed();
                     }
                 }
             })
