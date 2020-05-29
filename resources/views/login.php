@@ -32,7 +32,11 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
     <script>
 function submits(){
     window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
+    closed();
 }
+function closed() {
+            liff.closeWindow()
+        }
         async function main() {
             liff.ready.then(() => {
            
