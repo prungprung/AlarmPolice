@@ -31,11 +31,11 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
     <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
     <script>
 function submits(){
-    window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
     closed();
+    window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
+    
 }
 function closed() {
-    console.log("55555");
             liff.closeWindow()
         }
         async function main() {
