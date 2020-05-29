@@ -9,9 +9,9 @@
 <body>
 <div>
   <p>Taken from wikpedia</p>
-  <?php
-   dd($postbody);
-  ?>
+   {{
+       dd($postbody);
+   }}
 </div>
 </body>
 </html>
