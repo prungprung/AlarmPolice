@@ -19,7 +19,7 @@
 <div class="center">
 <div>
 user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></input>
-<br>password: <input type="text"></input><br>
+<br>password: <input type="text"></input><br/>
 </div><br>
 <div class="center-button"><input type="button" value="login" onclick="closed()"></input></div>
 </div>
