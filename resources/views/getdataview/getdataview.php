@@ -73,15 +73,15 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
         }
         async function main() {
             liff.ready.then(() => {
-                // if (liff.isLoggedIn()) {
+                if (liff.isLoggedIn()) {
                     logOut()
                     getdata();
-                // } else {
-                //     liff.login()
-                //     if (liff.isLoggedIn()) {
-                //         closed();
-                //     }
-                // }
+                } else {
+                    liff.login()
+                    if (liff.isLoggedIn()) {
+                        closed();
+                    }
+                }
             })
             await liff.init({
                 liffId: "1654272826-Og8LnyZ6"
