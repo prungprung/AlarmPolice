@@ -41,7 +41,7 @@ function closed() {
            i
             })
             await liff.init({
-                liffId: "1654272826-Og8LnyZ6"
+                liffId: "1654272826-aG6Wkoq8"
             })
         }
         main()
