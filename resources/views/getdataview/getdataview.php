@@ -7,20 +7,20 @@
 </head>
 <style>
 .center{
-    margin-left: 24%;
+    margin-left: 13%;
     margin-top: 95%;
 }
 .center-button{
-    padding-left: 24%;
+    padding-left: 38%;
 }
 </style>
 <body>
 
 <div class="center">
 <div>
-user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></input><br>
-password: <input type="text"></input><br>
-</div ><br>
+user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></input>
+<br>password: <input type="text"></input><br>
+</div><br>
 <div class="center-button"><input type="button" value="login" onclick="closed()"></input></div>
 </div>
 
