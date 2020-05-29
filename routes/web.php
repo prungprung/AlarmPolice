@@ -25,8 +25,11 @@ Route::get('/showvalue', function () {
 Route::get('/sendriff', function(){
     return view('getdataview/getdataview');
 });
-Route::get('/info', function(){
-    return view('Info1');
+Route::get('/findCar', function(){
+    return view('findCar');
+});
+Route::get('/car', function(){
+    return view('car');
 });
 Route::get('/sendtext','TextMessageLineController@TextMessageLine');
 Route::get('/sendflex','FlexLineController@Flex');
