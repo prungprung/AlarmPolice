@@ -65,7 +65,7 @@ class RichMenuController extends Controller
             ],
             "action" => [
               "type" => "uri",
-              "uri" => "http://intense-scrubland-71413.herokuapp.com/public/sendrichmenu/nonlogin"
+              "uri" => "http://intense-scrubland-71413.herokuapp.com/public/carblacklist"
             ]
           ]
         ]
