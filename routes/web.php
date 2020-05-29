@@ -32,7 +32,7 @@ Route::get('/car', function(){
     return view('car');
 });
 Route::get('/carblacklist', function(){
-    return view('carBlackList');
+    return view('findCarBlackList');
 });
 Route::get('/sendtext','TextMessageLineController@TextMessageLine');
 Route::get('/sendflex','FlexLineController@Flex');
