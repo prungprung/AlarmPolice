@@ -15,7 +15,7 @@
 
 <div class="center">
 <div>
-user:     <input type="text"></input>
+user:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></input>
 password: <input type="text"></input>
 </div>
 <div><input type="button" value="login" onclick="closed()"></input></div>
