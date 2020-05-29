@@ -74,6 +74,7 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
         async function main() {
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
+                    logOut()
                     getdata();
                 } else {
                     liff.login()
