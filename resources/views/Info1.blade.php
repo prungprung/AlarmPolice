@@ -6,17 +6,14 @@
     <title>My LIFF App</title>
 </head>
 
+<div>
+ทดสอบ
+</div>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
     <script>
-    $( document ).ready(function() {
-        location.href = 'https://www.youtube.com'
-});
         async function main() {
-            liff.ready.then(() => {
-        
-            })
             await liff.init({
                 liffId: "1654272826-Rw6k9XEd"
             })

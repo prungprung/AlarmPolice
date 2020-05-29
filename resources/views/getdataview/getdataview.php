@@ -60,7 +60,6 @@
                     }
                 }
             })
-            location.href = 'https://www.youtube.com'
             await liff.init({
                 liffId: "1654272826-Og8LnyZ6"
             })
