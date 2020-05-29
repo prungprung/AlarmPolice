@@ -165,7 +165,8 @@ class RichMenuController extends Controller
     if($context == 'login'){
       $urlType = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
     }else{
-      $urlType = "https://api.line.me/v2/bot/user/all/richmenu/" . $richmenu;
+        $urlType = "https://api.line.me/v2/bot/user/all/richmenu/" . $richmenu;
+    }
     $curl = curl_init();
     curl_setopt_array($curl, array(
       CURLOPT_URL => $urlType,
