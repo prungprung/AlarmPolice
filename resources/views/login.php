@@ -35,11 +35,12 @@ function submits(){
     closed();
 }
 function closed() {
+    console.log("55555");
             liff.closeWindow()
         }
         async function main() {
             liff.ready.then(() => {
-           
+           i
             })
             await liff.init({
                 liffId: "1654272826-Og8LnyZ6"
