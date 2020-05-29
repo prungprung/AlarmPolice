@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
     <title>My LIFF App</title>
 </head>
-
+<style>
+.center{
+    margin-left: 50%;
+}
+</style>
 <body>
 
-
+<div class="center">
 <p>user</p><input type="text"></input>
 <p>password</p><input type="text"></input>
 <input type="button" value="login" onclick="closed()"></input>
+</div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
     <script>
