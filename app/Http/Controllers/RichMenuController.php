@@ -33,7 +33,7 @@ class RichMenuController extends Controller
   public function RichMenu($context)
   {
    
-    if ($context != "login") {
+    if ($context == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [
@@ -143,7 +143,7 @@ class RichMenuController extends Controller
     $richmenu = substr($response, 15, 41);
     $curl = curl_init();
     curl_setopt_array($curl, array(
-      CURLOPT_URL =>  "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/".$richmenu,
+      CURLOPT_URL =>  "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content",
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,
@@ -167,7 +167,7 @@ class RichMenuController extends Controller
     // }
     $curl = curl_init();
     curl_setopt_array($curl, array(
-      CURLOPT_URL => "https://api.line.me/v2/bot/user/all/richmenu/" . $richmenu,
+      CURLOPT_URL => "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/".$richmenu,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,
