@@ -10,7 +10,7 @@
 <div>
   <p>Taken from wikpedia</p>
   <?php
-    dd($postbody);
+    dd($postbody->userId);
   ?>
 </div>
 </body>
