@@ -51,11 +51,11 @@
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    closed();
+                    // closed();
                 } else {
                     liff.login()
                     if (liff.isLoggedIn()) {
-                        closed();
+                        // closed();
                     }
                 }
             })
