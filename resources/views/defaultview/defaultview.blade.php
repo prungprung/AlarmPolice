@@ -2,3 +2,4 @@
 <button type="button" onclick="window.location='{{ url("/sendnotify") }}'">sendNotify</button>
 <button type="button" onclick="window.location='{{ url("/sendrichmenu/login") }}'">sendRichMenuLogin</button>
 <button type="button" onclick="window.location='{{ url("/sendrichmenu/nonlogin") }}'">sendRichMenuNonLogin</button>
+<button type="button" onclick="window.location='{{ url("/sendchatbot") }}'">sendchatbot</button>
