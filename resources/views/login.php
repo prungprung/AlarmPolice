@@ -38,6 +38,16 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
 function submits(){
     // window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
     window.location.href ="/sendrichmenu/login"
+    $.ajax({
+                type: "GET",
+                url: "/sendrichmenu/login",
+                success: function(data) {
+                    console.log("success")
+                },
+                fail: function(data) {
+                    console.log("error")
+                },
+            });
 }
         var userid;
         var displayName;
