@@ -33,7 +33,6 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
 
         function closed() {
             liff.closeWindow()
-            self.close();
         }
 function submits(){
     // window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
@@ -49,6 +48,7 @@ function submits(){
                     console.log("error")
                 },
             });
+            closed();
 }
         var userid;
         var displayName;
