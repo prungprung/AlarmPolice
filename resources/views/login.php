@@ -37,8 +37,7 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
 function submits(){
     closed();
     // window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
-    const profile = await liff.getProfile()
-    window.location.href ="/sendrichmenu/login/".profile.userId
+    window.location.href ="/sendrichmenu/login/"
 }
         var userid;
         var displayName;

@@ -22,9 +22,6 @@ Route::get('/defaultview', function () {
 Route::get('/showvalue', function () {
     return view('defaultview/showvalue');
 });
-Route::get('/sendriff', function(){
-    return view('getdataview/getdataview');
-});
 Route::get('/findCar', function(){
     return view('findCar');
 });
