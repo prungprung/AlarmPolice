@@ -50,7 +50,6 @@
         async function main() {
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
-                    window.location.href ="/sendrichmenu/login"
                     closed();
                 } else {
                     liff.login()
