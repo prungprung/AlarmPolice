@@ -33,13 +33,14 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
 
         function closed() {
             liff.closeWindow()
+            self.close();
         }
 function submits(){
-    liff.closeWindow();
  
     // window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
     
     window.location.href ="/sendrichmenu/login"
+    setTimeout(closed(), 5000 )
 }
         var userid;
         var displayName;
