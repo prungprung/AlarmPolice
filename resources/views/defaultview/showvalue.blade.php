@@ -10,7 +10,7 @@
 <div>
   <p>Taken from wikpedia</p>
   <?php
-    dd($tests);
+    dd($postbody);
   ?>
 </div>
 </body>
