@@ -5,38 +5,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
     <title>My LIFF App</title>
 </head>
-<style>
-.center{
-    margin-left: 13%;
-    margin-top: 95%;
-}
-.center-button{
-    padding-left: 38%;
-}
-</style>
 <body>
-
-<div class="center">
-<div>
-user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></input>
-<br>password: <input type="text"></input><br/>
-</div><br>
-<div class="center-button"><input type="button" value="login" onclick="submits()"></input></div>
-</div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
     <script>
-function submits(){
-    closed();
-    window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
-}
-var userid;
+        function logOut() {
+            liff.logout()
+            window.location.reload()
+        }
+
+        function closed() {
+            liff.closeWindow()
+        }
+
+        var userid;
         var displayName;
         var decodedIDToken;
         var utouId;
         var accessToken;
-async function getdata() {
+        async function getdata() {
             const profile = await liff.getProfile()
 
             var json = {
@@ -45,7 +32,6 @@ async function getdata() {
                 "accessToken": liff.getAccessToken()
             }
             console.log(json);
-            console.log("5555");
             $.ajax({
                 type: "GET",
                 url: "/senddata",
@@ -61,15 +47,16 @@ async function getdata() {
                 },
             });
         }
-        function closed() {
-            window.close() ;
-            liff.closeWindow()
-        }
         async function main() {
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    closed();
+                    // closed();
+                } else {
+                    liff.login()
+                    if (liff.isLoggedIn()) {
+                        // closed();
+                    }
                 }
             })
             await liff.init({
