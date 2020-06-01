@@ -56,7 +56,7 @@ async function getdata() {
                 },
             });
         }
-function closed() {
+        function closed() {
             window.close() ;
             liff.closeWindow()
         }
@@ -64,7 +64,7 @@ function closed() {
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    // closed();
+                    closed();
                 }
             })
             await liff.init({

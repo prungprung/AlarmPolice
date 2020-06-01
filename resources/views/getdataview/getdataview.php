@@ -23,10 +23,34 @@
         var decodedIDToken;
         var utouId;
         var accessToken;
+        async function getdata() {
+            const profile = await liff.getProfile()
+
+            var json = {
+                "userId": profile.userId,
+                "displayName": profile.displayName,
+                "accessToken": liff.getAccessToken()
+            }
+            console.log(json);
+            $.ajax({
+                type: "GET",
+                url: "/senddata",
+                data: {
+                    'data': json
+                },
+                dataType: "json",
+                success: function(data) {
+                    console.log("success")
+                },
+                fail: function(data) {
+                    console.log("error")
+                },
+            });
+        }
         async function main() {
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
-                    // getdata();
+                    getdata();
                     // closed();
                 } else {
                     liff.login()
