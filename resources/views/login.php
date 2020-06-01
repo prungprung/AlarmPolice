@@ -40,7 +40,7 @@ function submits(){
     // window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
     
     window.location.href ="/sendrichmenu/login"
-    setTimeout(closed(), 5000 )
+    setTimeout("closed()", 5000 )
 }
         var userid;
         var displayName;
