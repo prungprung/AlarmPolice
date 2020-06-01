@@ -17,8 +17,7 @@ class RichMenuController extends Controller
   public function lineData(Request $request)
   {
       $postbody = $request->data;
-      print_r($postbody);
-      exit();
+      return $postbody;
   }
   public function RichMenu($context)
   {
