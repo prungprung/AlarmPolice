@@ -14,26 +14,18 @@ class RichMenuController extends Controller
   public function _construct()
   {
   }
-  public function setUserId($userId)
+  public function setData(Request $request)
   {
-    print_r($userId);
+
+    print_r($request->status);
     print_r("-----");
-    $this->userId = $userId;
-    print_r($this->userId);
+    print_r($request->userId);
+    print_r("-----");
+    print_r($request->accessToken);
+    print_r("-----");
     exit();
   }
-  function getUserId()
-  {
-    return $this->userId;
-  }
-  public function setAccessToken($accessToken)
-  {
-    $this->accessToken = $accessToken;
-  }
-  function getAccessToken()
-  {
-    return $this->accessToken;
-  }
+  
   public function RichMenu($context)
   {
    

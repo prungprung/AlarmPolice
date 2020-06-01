@@ -13,9 +13,6 @@ class LiffLineController extends Controller
     public function Liff(Request $request)
     {
         $postbody = $request->data;
-
-        app('App\Http\Controllers\RichMenuController')->RichMenu("login");
-        app('App\Http\Controllers\RichMenuController')->setUserId($postbody['userId']);
-        app('App\Http\Controllers\RichMenuController')->setAccessToken($postbody['accessToken']);
+        return redirect()->route('listData', ['status' => "login",'userId' => $postbody['userId'],"accessToken"=> $postbody['accessToken']]);
     }
 }

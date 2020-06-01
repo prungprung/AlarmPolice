@@ -41,4 +41,5 @@ Route::get('/sendtext','TextMessageLineController@TextMessageLine');
 Route::get('/sendflex','FlexLineController@Flex');
 Route::get('/sendnotify','NotifyController@Notify');
 Route::get('/sendrichmenu/{context}','RichMenuController@RichMenu');
+Route::get('/listData','RichMenuController@setData');
 Route::get('/senddata','LiffLineController@Liff');
