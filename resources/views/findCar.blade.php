@@ -6,12 +6,14 @@
     <title>Alarm-Police</title>
 </head>
 <style>
-    table
-    {       
-         border: 1px solid black;
+    table {
+        border: 1px solid black;
         width: 100%;
     }
-    tr,td,th{
+
+    tr,
+    td,
+    th {
         text-align: center;
         border: 1px solid black;
         width: 33%;
@@ -33,37 +35,37 @@
                 <td>1</td>
                 <td>4คค1</td>
                 <td>Toyota</td>
-                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ"/></td>
+                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ" /></td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>4กน7789</td>
                 <td>Honda</td>
-                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ"/></td>
+                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ" /></td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>9นช413</td>
                 <td>Izuzu</td>
-                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ"/></td>
+                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ" /></td>
             </tr>
             <tr>
                 <td>4</td>
                 <td>กก11111</td>
                 <td>Mazda</td>
-                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ"/></td>
+                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ" /></td>
             </tr>
             <tr>
                 <td>5</td>
                 <td>สง9696</td>
                 <td>Bmw</td>
-                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ"/></td>
+                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ" /></td>
             </tr>
             <tr>
                 <td>6</td>
                 <td>8กล7789</td>
                 <td>Suzuki</td>
-                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ"/></td>
+                <td><input type="button" onclick="location.href='/car';" value="ตรวจสอบ" /></td>
             </tr>
         </table>
     </div>

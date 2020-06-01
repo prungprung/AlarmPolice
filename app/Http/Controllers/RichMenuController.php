@@ -14,17 +14,19 @@ class RichMenuController extends Controller
   {
   }
   public $tests;
-  public function getValue(){
+  public function getValue()
+  {
     return $this->tests;
   }
-  public function setValue($tests){
+  public function setValue($tests)
+  {
     $this->tests = $tests;
   }
   public function lineData(Request $request)
   {
-      $postbody = $request->data;
-      print_r($postbody);
-      $this->setValue($postbody);
+    $postbody = $request->data;
+    print_r($postbody);
+    $this->setValue($postbody);
   }
 
   public function RichMenu($context)
@@ -49,7 +51,7 @@ class RichMenuController extends Controller
             ],
             "action" => [
               "type" => "uri",
-              "uri" => "https://liff.line.me/1654272826-Rw6k9XEd" 
+              "uri" => "https://liff.line.me/1654272826-Rw6k9XEd"
             ]
           ],
           [
@@ -152,18 +154,18 @@ class RichMenuController extends Controller
         "Content-Type: image/jpeg"
       ),
     ));
-if($context == "login"){
-  $urls = "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/".$richmenu;
-  // $urls = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
-}else{
-  $urls = "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/".$richmenu;
-}
-// echo "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
-// exit();
+    if ($context == "login") {
+      $urls = "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/" . $richmenu;
+      // $urls = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
+    } else {
+      $urls = "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/" . $richmenu;
+    }
+    // echo "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
+    // exit();
     $response = curl_exec($curl);
     curl_close($curl);
     $curl = curl_init();
-        curl_setopt_array($curl, array(
+    curl_setopt_array($curl, array(
       CURLOPT_URL => $urls,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => "",

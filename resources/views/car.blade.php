@@ -6,19 +6,20 @@
     <title>Alarm-Police</title>
 </head>
 <style>
-  .center {
-  margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-  .center-image {
- margin-left: 28%;
-}
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 
+    .center-image {
+        margin-left: 28%;
+    }
 </style>
+
 <body>
     <img src="http://intense-scrubland-71413.herokuapp.com/public/image/Ecocars.jpg" class="center-image" alt="Trulli" width="150" height="150">
     <p> ชื่อ: นายทดสอบ นามสกุล: นายทดสอบ</p>

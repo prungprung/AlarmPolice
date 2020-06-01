@@ -9,13 +9,13 @@ class NotifyController extends Controller
 
     public function _construct()
     {
-
     }
-    public function Notify(){
-           $message = array("message" => "สวัสดรีจร้าาา\nเราปรุงเอง");
-           $url = 'https://notify-api.line.me/api/notify';
+    public function Notify()
+    {
+        $message = array("message" => "สวัสดรีจร้าาา\nเราปรุงเอง");
+        $url = 'https://notify-api.line.me/api/notify';
         $curl = curl_init();
-        curl_setopt_array($curl,array(
+        curl_setopt_array($curl, array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
@@ -32,14 +32,14 @@ class NotifyController extends Controller
         $err = curl_error($curl);
 
         curl_close($curl);
-        if($err){
-            $check = "cURL Error : ".$err;
-        }else if($response){
-            $check = "response Error : ".$response;
-        }else{
+        if ($err) {
+            $check = "cURL Error : " . $err;
+        } else if ($response) {
+            $check = "response Error : " . $response;
+        } else {
             $check = "No cURL and response Error";
         }
-        
+
         return redirect('/defaultview');
     }
 }

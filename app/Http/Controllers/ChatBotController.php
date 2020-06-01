@@ -9,5 +9,4 @@ class ChatBotController extends Controller
     public function _construct()
     {
     }
-
 }
