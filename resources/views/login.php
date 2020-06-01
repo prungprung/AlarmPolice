@@ -40,6 +40,7 @@ async function getdata() {
                 "accessToken": liff.getAccessToken()
             }
             console.log(json);
+            console.log("5555");
             $.ajax({
                 type: "GET",
                 url: "/senddata",
