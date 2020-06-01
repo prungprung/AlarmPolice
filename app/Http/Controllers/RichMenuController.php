@@ -17,12 +17,11 @@ class RichMenuController extends Controller
   public function lineData(Request $request)
   {
       $postbody = $request->data;
+      print_r($postbody);
+      exit();
   }
-  public function RichMenu($context,Request $request)
+  public function RichMenu($context)
   {
-    $postbody = $request->data;
-    echo $postbody;
-    exit();
     if ($context == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
