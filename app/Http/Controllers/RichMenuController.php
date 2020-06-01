@@ -157,9 +157,10 @@ class RichMenuController extends Controller
       ),
     ));
 if($context == "login"){
-  $url = "https://api.line.me/v2/bot/user/all/richmenu/".$richmenu;
-}else{
   $url = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
+}else{
+  $url = "https://api.line.me/v2/bot/user/all/richmenu/".$richmenu;
+
 }
 echo $url;
 exit();
