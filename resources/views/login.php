@@ -6,6 +6,23 @@
     <title>My LIFF App</title>
 </head>
 <body>
+<style>
+.center{
+    margin-left: 13%;
+    margin-top: 95%;
+}
+.center-button{
+    padding-left: 38%;
+}
+</style>
+<div class="center">
+<div>
+user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></input>
+<br>password: <input type="text"></input><br/>
+</div><br>
+<div class="center-button"><input type="button" value="login" onclick="submits()"></input></div>
+</div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
     <script>
