@@ -9,11 +9,20 @@ use LINE\LINEBot;
 
 class RichMenuController extends Controller
 {
+  public $userId = "";
+  public $accessToken = "";
+  public function _construct()
+  {
+  }
+  public function lineData(Request $request)
+  {
+      $postbody = $request->data;
+  }
   public function RichMenu($context,Request $request)
   {
-    $status = $request->status;
-    $userId = $request->userId;
-    $accessToken = $request->accessToken;
+    $postbody = $request->data;
+    echo $postbody;
+    exit();
     if ($context == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
@@ -138,11 +147,11 @@ class RichMenuController extends Controller
       ),
     ));
 if($context == "login"){
-  $urls = "https://api.line.me/v2/bot/user/".$userId."/richmenu/".$richmenu;
+  $urls = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
 }else{
   $urls = "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/".$richmenu;
 }
-echo "https://api.line.me/v2/bot/user/".$userId."/richmenu/".$richmenu;
+echo "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
 exit();
     $response = curl_exec($curl);
     curl_close($curl);

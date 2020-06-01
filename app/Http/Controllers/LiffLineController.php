@@ -10,9 +10,8 @@ class LiffLineController extends Controller
     public function _construct()
     {
     }
-    public function Liff(Request $request)
+    public function lineData(Request $request)
     {
         $postbody = $request->data;
-        return redirect('listData', ['status' => "login",'userId' => $postbody['userId'],"accessToken"=> $postbody['accessToken']]);
     }
 }
