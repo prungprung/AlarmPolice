@@ -24,15 +24,11 @@ class RichMenuController extends Controller
   {
       $postbody = $request->data;
       print_r($postbody);
-      exit();
       $this->setValue($postbody);
   }
 
   public function RichMenu($context)
   {
-    echo "555";
-    echo $this->getValue();
-    exit();
     if ($context == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
