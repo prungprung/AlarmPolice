@@ -55,7 +55,7 @@ function submits(){
             console.log(json);
             $.ajax({
                 type: "GET",
-                url: "/senddata",
+                url: "/listData",
                 data: {
                     'data': json
                 },
