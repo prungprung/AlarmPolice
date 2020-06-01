@@ -34,7 +34,10 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
         function closed() {
             liff.closeWindow()
         }
-
+function submits(){
+    closed();
+    window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
+}
         var userid;
         var displayName;
         var decodedIDToken;
