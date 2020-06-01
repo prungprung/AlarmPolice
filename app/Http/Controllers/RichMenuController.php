@@ -13,7 +13,7 @@ class RichMenuController extends Controller
   public function _construct()
   {
   }
-  public $tests = '';
+  public $tests;
   public function getValue(){
     return $this->tests;
   }
