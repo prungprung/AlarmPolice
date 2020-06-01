@@ -168,7 +168,7 @@ exit();
     curl_close($curl);
     $curl = curl_init();
         curl_setopt_array($curl, array(
-      CURLOPT_URL => $url.$richmenu,
+      CURLOPT_URL => $url,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,
