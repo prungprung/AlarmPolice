@@ -50,12 +50,12 @@
         async function main() {
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
-                    // getdata();
+                    getdata();
                     closed();
                 } else {
                     liff.login()
                     if (liff.isLoggedIn()) {
-                        // closed();
+                        closed();
                     }
                 }
             })
