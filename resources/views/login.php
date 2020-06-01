@@ -31,6 +31,11 @@ function submits(){
     closed();
     window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
 }
+var userid;
+        var displayName;
+        var decodedIDToken;
+        var utouId;
+        var accessToken;
 async function getdata() {
             const profile = await liff.getProfile()
 
