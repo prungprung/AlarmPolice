@@ -38,7 +38,6 @@ function submits(){
     closed();
     // window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
     window.location.href ="/sendrichmenu/login"
-    closed();
 }
         var userid;
         var displayName;
