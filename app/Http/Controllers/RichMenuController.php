@@ -14,11 +14,11 @@ class RichMenuController extends Controller
   public function _construct()
   {
   }
-  public function setUserId($userId)
-  {
-    $this->userId = $userId;
-  }
-  function getUserId()
+  // public function setUserId()
+  // {
+  //   $this->userId = $userId;
+  // }
+  function getUserId($userId)
   {
     return $this->userId;
   }
