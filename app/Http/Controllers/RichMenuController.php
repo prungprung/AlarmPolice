@@ -153,7 +153,8 @@ class RichMenuController extends Controller
       ),
     ));
 if($context == "login"){
-  $urls = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
+  $urls = "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/".$richmenu;
+  // $urls = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
 }else{
   $urls = "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/".$richmenu;
 }
