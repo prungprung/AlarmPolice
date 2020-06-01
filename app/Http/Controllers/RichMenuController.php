@@ -9,20 +9,27 @@ use LINE\LINEBot;
 
 class RichMenuController extends Controller
 {
-  public $userId = "";
-  public $accessToken = "";
+
   public function _construct()
   {
+  }
+  public $tests = '';
+  public function getValue(){
+    return $this->tests;
+  }
+  public function setValue($tests){
+    $this->tests = $tests;
   }
   public function lineData(Request $request)
   {
       $postbody = $request->data;
-      return $postbody;
+      $this->setValue($postbody);
   }
+
   public function RichMenu($context)
   {
     echo "555";
-    echo $this->lineData;
+    echo $this->getValue();
     exit();
     if ($context == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
