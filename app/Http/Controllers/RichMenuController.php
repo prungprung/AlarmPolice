@@ -136,8 +136,7 @@ class RichMenuController extends Controller
         "content-type: application/json"
       ),
     ));
-    // https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/richmenu-818d92776b6bd7b6d042388b7a7cefbb
-    // "https://api-data.line.me/v2/bot/richmenu/" . $richmenu . "/content"
+
     $response = curl_exec($curl);
     $err = curl_error($curl);
     $richmenu = substr($response, 15, 41);
@@ -157,12 +156,18 @@ class RichMenuController extends Controller
         "Content-Type: image/jpeg"
       ),
     ));
-
+if($context == "login"){
+  $url = "https://api.line.me/v2/bot/user/all/richmenu/".$richmenu;
+}else{
+  $url = "https://api.line.me/v2/bot/user/".$this->getUserId."/richmenu/".$richmenu;
+}
+echo $url;
+exit();
     $response = curl_exec($curl);
     curl_close($curl);
     $curl = curl_init();
         curl_setopt_array($curl, array(
-      CURLOPT_URL => "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/".$richmenu,
+      CURLOPT_URL => $url.$richmenu,
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_ENCODING => "",
       CURLOPT_MAXREDIRS => 10,

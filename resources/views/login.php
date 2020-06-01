@@ -30,15 +30,41 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
 function submits(){
     closed();
     window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
-    
 }
+async function getdata() {
+            const profile = await liff.getProfile()
+
+            var json = {
+                "userId": profile.userId,
+                "displayName": profile.displayName,
+                "accessToken": liff.getAccessToken()
+            }
+            console.log(json);
+            $.ajax({
+                type: "GET",
+                url: "/senddata",
+                data: {
+                    'data': json
+                },
+                dataType: "json",
+                success: function(data) {
+                    console.log("success")
+                },
+                fail: function(data) {
+                    console.log("error")
+                },
+            });
+        }
 function closed() {
             window.close() ;
             liff.closeWindow()
         }
         async function main() {
             liff.ready.then(() => {
-           i
+                if (liff.isLoggedIn()) {
+                    getdata();
+                    // closed();
+                }
             })
             await liff.init({
                 liffId: "1654272826-aG6Wkoq8"
