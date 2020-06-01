@@ -23,7 +23,7 @@ class RichMenuController extends Controller
   public function lineData(Request $request)
   {
       $postbody = $request->data;
-      echo($postbody);
+      print_r($postbody);
       exit();
       $this->setValue($postbody);
   }
