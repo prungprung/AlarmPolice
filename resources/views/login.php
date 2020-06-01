@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-    <title>My LIFF App</title>
+    <title>Alarm-Police</title>
 </head>
 <body>
 <style>
@@ -30,14 +30,10 @@ user:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"></
             liff.logout()
             window.location.reload()
         }
-
         function closed() {
             liff.closeWindow()
         }
 function submits(){
-    // window.location.href = "https://liff.line.me/1654272826-Og8LnyZ6"
-
-    // window.location.href ="/sendrichmenu/login"
     $.ajax({
                 type: "GET",
                 url: "/sendrichmenu/login",
@@ -83,11 +79,9 @@ function submits(){
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getdata();
-                    // closed();
                 } else {
                     liff.login()
                     if (liff.isLoggedIn()) {
-                        // closed();
                     }
                 }
             })
