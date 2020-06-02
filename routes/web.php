@@ -37,6 +37,9 @@ Route::get('/carblacklist', function(){
 Route::get('/login', function(){
     return view('login');
 });
+Route::get('/loginout', function(){
+    return view('loginout');
+});
 Route::get('/sendtext','TextMessageLineController@TextMessageLine');
 Route::get('/sendflex','FlexLineController@Flex');
 Route::get('/sendnotify','NotifyController@Notify');
