@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use LINE\LINEBot\HTTPClient\CurlHTTPClient;
-use LINE\LINEBot;
 
 class RichMenuController extends Controller
 {
@@ -18,12 +16,12 @@ class RichMenuController extends Controller
     $postbody = $request->data;
     print_r($postbody);
     $this->RichMenu($postbody);
+    return view('defaultview\Checkvalue',compact('postbody'));
     
   }
 
   public function RichMenu($postbody)
   {
-    echo $postbody;
     if ($postbody['status'] == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
