@@ -38,9 +38,9 @@
         }
 
         function submits() {
-            $.ajax({
+           $.ajax({
                 type: "GET",
-                url: "/sendrichmenu/login",
+                url: "/listData",
                 success: function(data) {
                     console.log("success")
                 },
