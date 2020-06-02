@@ -40,7 +40,7 @@
         function submits() {
             $.ajax({
                 type: "GET",
-                url: "/login",
+                url: "/listData/login",
                 success: function(data) {
                     console.log("success")
                 },
@@ -59,6 +59,7 @@
             const profile = await liff.getProfile()
 
             var json = {
+                "status": "login",
                 "userId": profile.userId,
                 "displayName": profile.displayName,
                 "accessToken": liff.getAccessToken()

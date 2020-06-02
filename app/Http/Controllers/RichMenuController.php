@@ -13,25 +13,18 @@ class RichMenuController extends Controller
   public function _construct()
   {
   }
-  public $tests;
-  public function getValue()
-  {
-    return $this->tests;
-  }
-  public function setValue($tests)
-  {
-    $this->tests = $tests;
-  }
   public function lineData(Request $request)
   {
     $postbody = $request->data;
     print_r($postbody);
-    $this->setValue($postbody);
+    $this->RichMenu($postbody);
+    
   }
 
-  public function RichMenu($context)
+  public function RichMenu($postbody)
   {
-    if ($context == "login") {
+    echo $postbody;
+    if ($postbody['status'] == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [
@@ -154,7 +147,7 @@ class RichMenuController extends Controller
         "Content-Type: image/jpeg"
       ),
     ));
-    if ($context == "login") {
+    if ($postbody['status']  == "login") {
       $urls = "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/" . $richmenu;
       // $urls = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
     } else {
