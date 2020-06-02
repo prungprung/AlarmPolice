@@ -37,28 +37,28 @@
             liff.closeWindow()
         }
 
-        function submits() {
-           $.ajax({
-                type: "GET",
-                url: "/listData",
-                success: function(data) {
-                    console.log("success")
-                },
-                fail: function(data) {
-                    console.log("error")
-                },
-            });
-            closed();
-        }
+        // function submits() {
+        //    $.ajax({
+        //         type: "GET",
+        //         url: "/listData",
+        //         success: function(data) {
+        //             console.log("success")
+        //         },
+        //         fail: function(data) {
+        //             console.log("error")
+        //         },
+        //     });
+        // }
         var userid;
         var displayName;
         var decodedIDToken;
         var utouId;
         var accessToken;
-        async function getdata() {
+        async function submits() {
             const profile = await liff.getProfile()
 
             var json = {
+                "status" : "login",
                 "userId": profile.userId,
                 "displayName": profile.displayName,
                 "accessToken": liff.getAccessToken()
