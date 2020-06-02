@@ -38,17 +38,17 @@
         }
 
         function submits() {
-            $.ajax({
-                type: "GET",
-                url: "/listData",
-                success: function(data) {
-                    console.log("success")
-                },
-                fail: function(data) {
-                    console.log("error")
-                },
-            });
-            closed();
+            // $.ajax({
+            //     type: "GET",
+            //     url: "/listData",
+            //     success: function(data) {
+            //         console.log("success")
+            //     },
+            //     fail: function(data) {
+            //         console.log("error")
+            //     },
+            // });
+            // closed();
         }
         var userid;
         var displayName;
