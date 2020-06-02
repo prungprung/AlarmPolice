@@ -55,35 +55,34 @@
         var utouId;
         var accessToken;
         async function submits() {
-            const profile = await liff.getProfile()
+                const profile = await liff.getProfile()
 
-            var json = {
-                "status" : "login",
-                "userId": profile.userId,
-                "displayName": profile.displayName,
-                "accessToken": liff.getAccessToken()
-            }
-            console.log(json);
-            $.ajax({
-                type: "GET",
-                url: "/listData",
-                data: {
-                    'data': json
-                },
-                dataType: "json",
-                success: function(data) {
-                    console.log("success")
-                },
-                fail: function(data) {
-                    console.log("error")
-                },
-            });
+                var json = {
+                    "status": "login",
+                    "userId": profile.userId,
+                    "displayName": profile.displayName,
+                    "accessToken": liff.getAccessToken()
+                }
+                console.log(json);
+                $.ajax({
+                    type: "GET",
+                    url: "/listData",
+                    data: {
+                        'data': json
+                    },
+                    dataType: "json",
+                    success: function(data) {
+                        console.log("success")
+                    },
+                    fail: function(data) {
+                        console.log("error")
+                    },
+                });
+
         }
         async function main() {
             liff.ready.then(() => {
-                if (liff.isLoggedIn()) {
-                    getdata();
-                } else {
+                if (liff.isLoggedIn()) {} else {
                     liff.login()
                     if (liff.isLoggedIn()) {}
                 }
