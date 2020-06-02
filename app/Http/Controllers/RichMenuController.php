@@ -14,7 +14,9 @@ class RichMenuController extends Controller
   public function lineData(Request $request)
   {
     $postbody = $request->data;
+    print_r($postbody);
     $this->RichMenu($postbody);
+    return View('/defaultview/Checkvalue',compact('test'));
   }
   public function RichMenu($postbody)
   {

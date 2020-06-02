@@ -40,7 +40,7 @@
         function submits() {
             $.ajax({
                 type: "GET",
-                url: "/listData/login",
+                url: "/listData",
                 success: function(data) {
                     console.log("success")
                 },
