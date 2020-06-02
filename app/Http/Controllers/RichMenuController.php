@@ -14,16 +14,10 @@ class RichMenuController extends Controller
   public function lineData(Request $request)
   {
     $postbody = $request->data;
-    print_r($postbody);
     $this->RichMenu($postbody);
-    
-    
   }
-
   public function RichMenu($postbody)
   {
-    $test=$postbody['status'];
-    return View('/defaultview/Checkvalue',compact('test'));
     if ($postbody['status'] == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
