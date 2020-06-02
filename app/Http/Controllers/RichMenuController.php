@@ -148,6 +148,7 @@ class RichMenuController extends Controller
     } else {
       $urls = "https://api.line.me/v2/bot/user/all/richmenu/" . $richmenu;
     }
+    return View('/defaultview/Checkvalue',compact('urls'));
     $response = curl_exec($curl);
     curl_close($curl);
     $curl = curl_init();
