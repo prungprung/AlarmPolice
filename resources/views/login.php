@@ -40,7 +40,7 @@
         function submits() {
             $.ajax({
                 type: "GET",
-                url: "/sendrichmenu/login",
+                url: "/login",
                 success: function(data) {
                     console.log("success")
                 },
