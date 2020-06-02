@@ -38,17 +38,17 @@
         }
 
         function submits() {
-            // $.ajax({
-            //     type: "GET",
-            //     url: "/listData",
-            //     success: function(data) {
-            //         console.log("success")
-            //     },
-            //     fail: function(data) {
-            //         console.log("error")
-            //     },
-            // });
-            // closed();
+            $.ajax({
+                type: "GET",
+                url: "/sendrichmenu/login",
+                success: function(data) {
+                    console.log("success")
+                },
+                fail: function(data) {
+                    console.log("error")
+                },
+            });
+            closed();
         }
         var userid;
         var displayName;
@@ -57,8 +57,8 @@
         var accessToken;
         async function getdata() {
             const profile = await liff.getProfile()
+
             var json = {
-                "status": "login",
                 "userId": profile.userId,
                 "displayName": profile.displayName,
                 "accessToken": liff.getAccessToken()
