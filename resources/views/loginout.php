@@ -17,9 +17,6 @@
             padding-left: 38%;
         }
     </style>
-    <div class="center">
-        <div class="center-button"><input type="button" value="loginout" onclick="submits()"></input></div>
-    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
@@ -32,19 +29,6 @@
         function closed() {
             liff.closeWindow()
         }
-
-        // function submits() {
-        //    $.ajax({
-        //         type: "GET",
-        //         url: "/listData",
-        //         success: function(data) {
-        //             console.log("success")
-        //         },
-        //         fail: function(data) {
-        //             console.log("error")
-        //         },
-        //     });
-        // }
         var userid;
         var displayName;
         var decodedIDToken;
