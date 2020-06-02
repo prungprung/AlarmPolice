@@ -47,12 +47,13 @@
                         console.log("error")
                     },
                 });
-                closed();
+                
         }
         async function main() {
             liff.ready.then(() => {
                 if (liff.isLoggedIn()) {
                     getvalue();
+                    closed();
                 } else {
                     
                     if (liff.isLoggedIn()) {}
