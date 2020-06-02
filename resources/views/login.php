@@ -78,7 +78,7 @@
                         console.log("error")
                     },
                 });
-
+                closed();
         }
         async function main() {
             liff.ready.then(() => {
