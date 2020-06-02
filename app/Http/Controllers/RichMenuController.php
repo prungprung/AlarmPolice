@@ -78,7 +78,7 @@ class RichMenuController extends Controller
             ],
             "action" => [
               "type" => "uri",
-              "uri" => "http://www.highway.police.go.th/index_home2559.php"
+              "uri" => "https://liff.line.me/1654272826-aG6Wkoq8"
             ]
           ],
           [
