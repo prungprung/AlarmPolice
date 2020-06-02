@@ -16,12 +16,14 @@ class RichMenuController extends Controller
     $postbody = $request->data;
     print_r($postbody);
     $this->RichMenu($postbody);
-    return View('/defaultview/Checkvalue',compact('postbody'));
+    
     
   }
 
   public function RichMenu($postbody)
   {
+    $test=$postbody['status'];
+    return View('/defaultview/Checkvalue',compact('test'));
     if ($postbody['status'] == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
@@ -146,13 +148,10 @@ class RichMenuController extends Controller
       ),
     ));
     if ($postbody['status']  == "login") {
-      $urls = "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/" . $richmenu;
-      // $urls = "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
+      $urls = "https://api.line.me/v2/bot/user/".$postbody['userId']."/richmenu/".$richmenu;
     } else {
-      $urls = "https://api.line.me/v2/bot/user/U4638e9a419fd8a40e2ee1164bda3145c/richmenu/" . $richmenu;
+      $urls = "https://api.line.me/v2/bot/user/all/richmenu/" . $richmenu;
     }
-    // echo "https://api.line.me/v2/bot/user/".$this->getUserId()."/richmenu/".$richmenu;
-    // exit();
     $response = curl_exec($curl);
     curl_close($curl);
     $curl = curl_init();
