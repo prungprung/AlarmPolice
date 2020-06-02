@@ -57,7 +57,6 @@
         var accessToken;
         async function getdata() {
             const profile = await liff.getProfile()
-
             var json = {
                 "status": "login",
                 "userId": profile.userId,
