@@ -16,7 +16,7 @@ class RichMenuController extends Controller
     $postbody = $request->data;
     print_r($postbody);
     $this->RichMenu($postbody);
-    return View('/defaultview/Checkvalue',compact('postbody'));
+    
   }
   public function RichMenu($postbody)
   {
@@ -150,6 +150,7 @@ class RichMenuController extends Controller
     }
     echo $postbody['userId'];
     echo "-------------";
+    echo $urls;
     return View('/defaultview/Checkvalue',compact('postbody'));
     $response = curl_exec($curl);
     curl_close($curl);
