@@ -21,54 +21,90 @@ class RichMenuController extends Controller
   public function RichMenu($postbody)
   {
     if ($postbody['status'] == "login") {
-      $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_1_logout.jpeg';
+      $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
-        "size"=> [
-          "width"=> 2500,
-          "height"=> 1686
-       ],
-        "selected"=> true,
-        "name"=> "Rich Menu 1",
-        "chatBarText"=> "Bulletin",
-        "areas"=> [
+        "size" => [
+          "width" => 2500,
+          "height" => 843
+        ],
+        "selected" => true,
+        "name" => "login",
+        "chatBarText" => "Menu",
+        "areas" => [
           [
-            "bounds"=> [
-              "x"=> 0,
-              "y"=> 0,
-              "width"=> 831,
-              "height"=> 843
-           ],
-            "action"=> [
-              "type"=> "uri",
-              "uri"=> "https://liff.line.me/1654272826-Rw6k9XEd"
-           ]
-         ],
+            "bounds" => [
+              "x" => 0,
+              "y" => 0,
+              "width" => 1246,
+              "height" => 843
+            ],
+            "action" => [
+              "type" => "uri",
+              "uri" => "https://liff.line.me/1654272826-Rw6k9XEd"
+            ]
+          ],
           [
-            "bounds"=> [
-              "x"=> 831,
-              "y"=> 0,
-              "width"=> 838,
-              "height"=> 843
-           ],
-            "action"=> [
-              "type"=> "uri",
-              "uri"=> "http://intense-scrubland-71413.herokuapp.com/public/loginout"
-           ]
-         ],
-          [
-            "bounds"=> [
-              "x"=> 1665,
-              "y"=> 0,
-              "width"=> 835,
-              "height"=> 843
-           ],
-            "action"=> [
-              "type"=> "uri",
-              "uri"=> "http://intense-scrubland-71413.herokuapp.com/public/carblacklist"
-           ]
-         ]
+            "bounds" => [
+              "x" => 1250,
+              "y" => 0,
+              "width" => 1250,
+              "height" => 840
+            ],
+            "action" => [
+              "type" => "uri",
+              "uri" => "http://intense-scrubland-71413.herokuapp.com/public/carblacklist"
+            ]
+          ]
         ]
       ];
+      // $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_1_logout.jpeg';
+      // $data =  [
+      //   "size"=> [
+      //     "width"=> 2500,
+      //     "height"=> 1686
+      //  ],
+      //   "selected"=> true,
+      //   "name"=> "Rich Menu 1",
+      //   "chatBarText"=> "Bulletin",
+      //   "areas"=> [
+      //     [
+      //       "bounds"=> [
+      //         "x"=> 0,
+      //         "y"=> 0,
+      //         "width"=> 831,
+      //         "height"=> 843
+      //      ],
+      //       "action"=> [
+      //         "type"=> "uri",
+      //         "uri"=> "https://liff.line.me/1654272826-Rw6k9XEd"
+      //      ]
+      //    ],
+      //     [
+      //       "bounds"=> [
+      //         "x"=> 831,
+      //         "y"=> 0,
+      //         "width"=> 838,
+      //         "height"=> 843
+      //      ],
+      //       "action"=> [
+      //         "type"=> "uri",
+      //         "uri"=> "http://intense-scrubland-71413.herokuapp.com/public/loginout"
+      //      ]
+      //    ],
+      //     [
+      //       "bounds"=> [
+      //         "x"=> 1665,
+      //         "y"=> 0,
+      //         "width"=> 835,
+      //         "height"=> 843
+      //      ],
+      //       "action"=> [
+      //         "type"=> "uri",
+      //         "uri"=> "http://intense-scrubland-71413.herokuapp.com/public/carblacklist"
+      //      ]
+      //    ]
+      //   ]
+      // ];
     } else {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_1_.jpeg';
       $data = [
