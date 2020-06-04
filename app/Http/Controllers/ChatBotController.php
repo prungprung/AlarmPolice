@@ -11,13 +11,15 @@ class ChatBotController extends Controller
     }
     public function ChatBot()
     {
+
+
         $method = $_SERVER['REQUEST_METHOD'];
-        if ($method == "GET") {
-            $requestBody = file_get_contents('php://input');
-            $json = json_decode($requestBody);
-            $text = $json->queryResult->queryText;
+        if($method == "POST"){
+        $requestBody = file_get_contents('php://input');
+        $json = json_decode($requestBody);
+        $text = $json->queryResult->queryText;
         
-            switch ($text) {
+        switch($text){
             case 'hi':
                 $speech = "Hi my 8.";
             break;
@@ -28,7 +30,16 @@ class ChatBotController extends Controller
             $speech = "Say default.";
             break;
         }
-            // return view('/defaultview/Checkvalue');
+
+        $response = new \stdClass();
+        $response->speech=gettype($text);
+        $response->displayText=$speech;
+        $response->source="webhook";
+        echo json_encode($response);
+        }else{
+        echo "metho not allowed";
         }
+        // return view('/defaultview/Checkvalue');
     }
+  
 }
