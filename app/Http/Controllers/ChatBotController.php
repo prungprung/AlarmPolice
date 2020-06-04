@@ -24,6 +24,9 @@ class ChatBotController extends Controller
             case 'by':
                 $speech = "bye my 8.";
             break;
+            default:
+            $speech = "Say default.";
+            break;
         }
 
         $response = new \stdClass();
