@@ -41,4 +41,4 @@ Route::get('/sendtext','TextMessageLineController@TextMessageLine');
 Route::get('/sendflex','FlexLineController@Flex');
 Route::get('/sendnotify','NotifyController@Notify');
 Route::get('/listData','RichMenuController@lineData');
-Route::post('/sendchatbot','ChatBotController@ChatBot');
+Route::get('/sendchatbot','ChatBotController@ChatBot');
