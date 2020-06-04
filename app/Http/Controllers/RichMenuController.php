@@ -11,15 +11,9 @@ class RichMenuController extends Controller
   public function _construct()
   {
   }
-  public function lineData(Request $request)
+  public function RichMenu(Request $request)
   {
     $postbody = $request->data;
-    $this->RichMenu($postbody);
-    
-    
-  }
-  public function RichMenu($postbody)
-  {
     if ($postbody['status'] == "login") {
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [

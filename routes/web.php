@@ -40,5 +40,6 @@ Route::get('/loginout', function(){
 Route::get('/sendtext','TextMessageLineController@TextMessageLine');
 Route::get('/sendflex','FlexLineController@Flex');
 Route::get('/sendnotify','NotifyController@Notify');
-Route::get('/listData','RichMenuController@lineData');
+Route::get('/listData','RichMenuController@RichMenu');
+Route::get('/sendText','SendTextController@SendText');
 Route::get('/sendchatbot','ChatBotController@ChatBot');

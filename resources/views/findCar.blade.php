@@ -23,7 +23,7 @@
 <body>
     <div>
         ค้นหารถ<br>
-        <input type="text"></input><input type="button" value="ค้นหา"></input><br><br>
+        <input type="text"></input><input type="button" onclick="findCar()" value="ค้นหา"></input><br><br>
         <table>
             <tr>
                 <th>เลขที่</th>
