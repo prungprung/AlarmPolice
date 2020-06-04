@@ -12,7 +12,7 @@ class ChatBotController extends Controller
     public function ChatBot()
     {
         $method = $_SERVER['REQUEST_METHOD'];
-        if($method == "GET"){
+        if($method == "POST"){
         $requestBody = file_get_contents('php://input');
         $json = json_decode($requestBody);
         $text = $json->queryResult->queryText;
