@@ -15,8 +15,8 @@ class ChatBotController extends Controller
         $content = file_get_contents('php://input');
         $events = json_decode($content, true);
         $access_token = 'mCJv5+R/NzahU6FczR8quazO0HpzsjHUhj8ygOptTepkz4VLY7GJ25ZY/IbmT0zCliv4ryqsdstJkJ2XaAKleH10Oor5/RfLWvWpZ8G5Z85xlABpWumYnTsfMYToaiaiK9k5wBEHiyWpR+xATHtY/QdB04t89/1O/w1cDnyilFU=';
-        // if (!is_null($events['events'])) {
-        //     foreach ($events['events'] as $event) {
+        if (!is_null($events['events'])) {
+            foreach ($events['events'] as $event) {
         //         if ($event['type'] == 'message') {
                     // $text = $event['source']['userId'];
                     // $replyToken = $event['replyToken'];
@@ -44,8 +44,8 @@ class ChatBotController extends Controller
                     // curl_close($ch);
                     // echo $result . "\r\n";
         //         }
-        //     }
-        // }
+            }
+        }
         echo "OK";
     }
 }
