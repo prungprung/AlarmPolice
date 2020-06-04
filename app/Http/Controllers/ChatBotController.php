@@ -15,8 +15,8 @@ class ChatBotController extends Controller
         if($method == "GET"){
         $requestBody = file_get_contents('php://input');
         $json = json_decode($requestBody);
-        $text = $json->queryResult->queryText;
-
+        // $text = $json->queryResult->queryText;
+                    $text = "5550";
         switch($text){
             case 'hi':
                 $speech = "Hi my 8.";
