@@ -20,6 +20,9 @@ class ChatBotController extends Controller
                 if ($event['type'] == 'message') {
                     $text = $event['source']['userId'];
                     $replyToken = $event['replyToken'];
+                    if(stristr($text, 'hello') == TRUE){
+                        $text = 'Hello sir.Need anything help';
+                    }
                     $messages = [
                         'type' => 'text',
                         'text' => $text
@@ -27,7 +30,7 @@ class ChatBotController extends Controller
                     $url = 'https://api.line.me/v2/bot/message/reply';
                     $data = [
                         'replyToken' => $replyToken,
-                        'messages' => [$messages],
+                        'messages' => $messages,
                     ];
                     $post = json_encode($data);
                     $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
