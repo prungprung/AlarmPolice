@@ -15,14 +15,13 @@ class ChatBotController extends Controller
         if($method == "GET"){
         $requestBody = file_get_contents('php://input');
         $json = json_decode($requestBody);
-        // $text = $json->queryResult->queryText;
-                    $text = "5550";
+        $text = $json->queryResult->queryText;
         switch($text){
             case 'hi':
                 $speech = "Hi my 8.";
             break;
-            case 'by':
-                $speech = "bye my 8.";
+            case '777':
+                $speech = "bye my 777.";
             break;
             default:
             $speech = "Say default.";
@@ -31,7 +30,7 @@ class ChatBotController extends Controller
 
         $response = new \stdClass();
         $response->speech=$speech;
-        $response->displayText=json_decode("ปรุง");
+        $response->displayText=$speech;
         $response->source="webhook";
         echo json_encode($response);
         }else{
