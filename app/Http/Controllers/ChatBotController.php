@@ -11,5 +11,6 @@ class ChatBotController extends Controller
     }
     public function ChatBot()
     {
+        echo "สวัวดีจร้า";
     }
 }
