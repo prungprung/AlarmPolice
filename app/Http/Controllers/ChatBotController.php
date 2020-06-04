@@ -16,6 +16,7 @@ class ChatBotController extends Controller
         $requestBody = file_get_contents('php://input');
         $json = json_decode($requestBody);
         $text = $json->queryResult->queryText;
+        
         switch($text){
             case 'hi':
                 $speech = "Hi my 8.";
@@ -29,7 +30,7 @@ class ChatBotController extends Controller
         }
 
         $response = new \stdClass();
-        $response->speech=$speech;
+        $response->speech=gettype($text);
         $response->displayText=$speech;
         $response->source="webhook";
         echo json_encode($response);
