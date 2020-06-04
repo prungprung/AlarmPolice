@@ -31,7 +31,7 @@ class ChatBotController extends Controller
 
         $response = new \stdClass();
         $response->speech=$speech;
-        $response->displayText="ปรุง";
+        $response->displayText=json_decode("ปรุง");
         $response->source="webhook";
         echo json_encode($response);
         }else{
