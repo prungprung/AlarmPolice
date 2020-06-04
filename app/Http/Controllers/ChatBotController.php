@@ -11,6 +11,7 @@ class ChatBotController extends Controller
     }
     public function ChatBot()
     {
+        
         $content = file_get_contents('php://input');
         $events = json_decode($content, true);
         $access_token = 'mCJv5+R/NzahU6FczR8quazO0HpzsjHUhj8ygOptTepkz4VLY7GJ25ZY/IbmT0zCliv4ryqsdstJkJ2XaAKleH10Oor5/RfLWvWpZ8G5Z85xlABpWumYnTsfMYToaiaiK9k5wBEHiyWpR+xATHtY/QdB04t89/1O/w1cDnyilFU=';
