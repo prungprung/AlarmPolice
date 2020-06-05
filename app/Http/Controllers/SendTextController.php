@@ -15,9 +15,6 @@ class SendTextController extends Controller
         print_r($arrays);
         $lenght = count($arrays);
         for ($i = 0; $i < $lenght; $i++) {
-            echo "-";
-            echo $i;
-
             $data = [
                 "to" => $arrays['userId.' . $i],
                 "messages" => [
