@@ -14,19 +14,20 @@ class SendTextController extends Controller
         $arrays = $this->readText();
         print_r($arrays);
         $lenght = count($arrays);
-        $curl = curl_init();
         for ($i = 0; $i < $lenght; $i++) {
-            echo $arrays['userId.'.$i];
+            echo "-";
+            echo $i;
+
             $data = [
-                "to" => $arrays['userId.'.$i],
+                "to" => $arrays['userId.' . $i],
                 "messages" => [
                     [
                         "type" => "text",
                         "text" => "hello"
                     ]
                 ]
-                    ];
-
+            ];
+            $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_URL => "https://api.line.me/v2/bot/message/push",
                 CURLOPT_RETURNTRANSFER => true,
@@ -37,20 +38,19 @@ class SendTextController extends Controller
                 CURLOPT_CUSTOMREQUEST => "POST",
                 CURLOPT_POSTFIELDS => json_encode($data),
                 CURLOPT_HTTPHEADER => array(
-                  "authorization: Bearer mCJv5+R/NzahU6FczR8quazO0HpzsjHUhj8ygOptTepkz4VLY7GJ25ZY/IbmT0zCliv4ryqsdstJkJ2XaAKleH10Oor5/RfLWvWpZ8G5Z85xlABpWumYnTsfMYToaiaiK9k5wBEHiyWpR+xATHtY/QdB04t89/1O/w1cDnyilFU=",
-                  "content-type: application/json"
+                    "authorization: Bearer mCJv5+R/NzahU6FczR8quazO0HpzsjHUhj8ygOptTepkz4VLY7GJ25ZY/IbmT0zCliv4ryqsdstJkJ2XaAKleH10Oor5/RfLWvWpZ8G5Z85xlABpWumYnTsfMYToaiaiK9k5wBEHiyWpR+xATHtY/QdB04t89/1O/w1cDnyilFU=",
+                    "content-type: application/json"
                 ),
-              ));
-            // }
+            ));
             $response = curl_exec($curl);
             curl_close($curl);
         }
     }
     public function readText()
-        {
-            // Read File
-            $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
-            $data = json_decode($jsonString, true);
-            return $data;
-        }
+    {
+        // Read File
+        $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
+        $data = json_decode($jsonString, true);
+        return $data;
+    }
 }
