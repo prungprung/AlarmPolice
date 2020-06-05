@@ -6,18 +6,19 @@ use Illuminate\Http\Request;
 
 class SendTextController extends Controller
 {
+
     public function _construct()
     {
     }
-    public function SendText(Request $request)
+    public function SendText()
     {
-        $this->readText();
-        exit();
-        $postbody = $request->data;
-        $curl = curl_init();
-        $data =
+        $arrays = $this->readText();
+        $lenght = count($arrays);
+        for ($i = 0 ; $i < $lenght;$i++) {
+            $curl = curl_init();
+            $data =
         [
-            "to"=> $postbody['userId'],
+            "to"=> $arrays['userId.-'.$i],
                "messages"=>[
                     [
                          "type"=>"text",
@@ -25,8 +26,8 @@ class SendTextController extends Controller
                ]
                 ]
                     ];
-        $urls = 'https://api.line.me/v2/bot/message/push';
-        curl_setopt_array($curl, array(
+            $urls = 'https://api.line.me/v2/bot/message/push';
+            curl_setopt_array($curl, array(
             CURLOPT_URL => $urls,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
@@ -40,14 +41,13 @@ class SendTextController extends Controller
                 "content-type: application/json"
             ),
         ));
+        }
     }
     public function readText()
     {
       // Read File
       $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
       $data = json_decode($jsonString, true);
-      $length = count($data) - 1;
-      print_r($data) ;
-     
+     return $data;
     }
 }
