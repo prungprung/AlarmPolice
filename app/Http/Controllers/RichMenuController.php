@@ -12,11 +12,10 @@ class RichMenuController extends Controller
   }
   public function RichMenu(Request $request)
   {
+    
     $postbody = $request->data;
     if ($postbody['status'] == "login") {
       $this->writrandread($postbody['userId']);
-      echo $postbody['userId'];
-      exit();
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [
@@ -215,18 +214,17 @@ class RichMenuController extends Controller
   }
 
 
-  public function writrandread($lineUserId){
-    echo $lineUserId;
-    echo "----";
+  public function writrandread($userid){
     // Read File
-    $jsonString = file_get_contents('resources/lang/en/en.json');
     echo base_path('resources/lang/en/en.json');
 
-    $data = json_decode($jsonString, true);
-
-    // Update Key
-
-    $data['userId'] = $lineUserId;
+    $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
+echo  $jsonString;
+  $data = json_decode($jsonString, true);
+  $length = count($data)-1;
+  echo $length;
+    // Update Keyd
+    $data['userId.'.$length.''] = $userid;
 
 
 
@@ -234,7 +232,7 @@ class RichMenuController extends Controller
 
     $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
 
-    file_put_contents('resources/lang/en/en.json', stripslashes($newJsonString));
+    file_put_contents(base_path('resources/lang/en/en.json'), stripslashes($newJsonString));
 
 
   }
