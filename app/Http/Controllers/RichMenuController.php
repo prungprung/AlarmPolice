@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class RichMenuController extends Controller
 {
 
@@ -14,7 +13,11 @@ class RichMenuController extends Controller
   public function RichMenu(Request $request)
   {
     $postbody = $request->data;
+    $results = DB::select('select * from user');
+    print_r($results);
+    exit();
     if ($postbody['status'] == "login") {
+      DB::insert('insert into user (id, line_id,display_name,police_id) values (?,?,?,?)', [1, $postbody['userId'],'888','999']);
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [

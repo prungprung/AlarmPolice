@@ -25,7 +25,7 @@ class NotifyController extends Controller
             CURLOPT_POSTFIELDS => $message,
             CURLOPT_HTTPHEADER => array(
                 "accept: */*",
-                "Authorization: Bearer mCJv5+R/NzahU6FczR8quazO0HpzsjHUhj8ygOptTepkz4VLY7GJ25ZY/IbmT0zCliv4ryqsdstJkJ2XaAKleH10Oor5/RfLWvWpZ8G5Z85xlABpWumYnTsfMYToaiaiK9k5wBEHiyWpR+xATHtY/QdB04t89/1O/w1cDnyilFU="
+                "Authorization: Bearer 2igIBS1B2m3dp20yngmPqWGvt0PeLSOYcQYfRhqjHpw"
             ),
         ));
         $response = curl_exec($curl);
