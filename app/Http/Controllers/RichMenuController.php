@@ -218,6 +218,7 @@ class RichMenuController extends Controller
 
   public function writrandread($userid)
   {
+    $CheckDupicate = false;
     // Read File
     $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
     $data = json_decode($jsonString, true);
@@ -227,11 +228,12 @@ class RichMenuController extends Controller
     // Write File
     for ($i = 0; $i <= $lenght; $i++) {
       if(strval($data['userId.'.$i]) == strval($userid)){
-       
-      }else{
-        $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
-        file_put_contents(base_path('resources/lang/en/en.json'), stripslashes($newJsonString));
+       $CheckDupicate = true;
       }
+    }
+    if($CheckDupicate){
+      $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
+      file_put_contents(base_path('resources/lang/en/en.json'), stripslashes($newJsonString));
     }
   }
 }
