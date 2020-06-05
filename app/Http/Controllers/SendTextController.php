@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class SendTextController extends Controller
 {
-
     public function _construct()
     {
     }
@@ -42,15 +41,16 @@ class SendTextController extends Controller
                   "content-type: application/json"
                 ),
               ));
-        // }
-        $response = curl_exec($curl);
-        curl_close($curl);
+            // }
+            $response = curl_exec($curl);
+            curl_close($curl);
+        }
     }
     public function readText()
-    {
-        // Read File
-        $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
-        $data = json_decode($jsonString, true);
-        return $data;
-    }
+        {
+            // Read File
+            $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
+            $data = json_decode($jsonString, true);
+            return $data;
+        }
 }
