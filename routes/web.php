@@ -42,4 +42,4 @@ Route::get('/sendflex','FlexLineController@Flex');
 Route::get('/sendnotify','NotifyController@Notify');
 Route::get('/listData','RichMenuController@RichMenu');
 Route::get('/sendText','SendTextController@SendText');
-Route::post('/sendchatbot','ChatBotController@ChatBot');
+
