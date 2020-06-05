@@ -15,7 +15,6 @@ class SendTextController extends Controller
         $arrays = $this->readText();
         $lenght = count($arrays);
         for ($i = 0; $i < $lenght; $i++){
-            echo gettype($arrays['userId.' . $i]);
             $curl = curl_init();
             $data =[
                 "to" => strval($arrays['userId.' . $i]),
@@ -35,7 +34,7 @@ class SendTextController extends Controller
                 CURLOPT_TIMEOUT => 0,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "GET",
-                CURLOPT_POSTFIELDS => "5",
+                CURLOPT_POSTFIELDS => $data,
                 CURLOPT_HTTPHEADER => array(
                     "authorization: Bearer mCJv5+R/NzahU6FczR8quazO0HpzsjHUhj8ygOptTepkz4VLY7GJ25ZY/IbmT0zCliv4ryqsdstJkJ2XaAKleH10Oor5/RfLWvWpZ8G5Z85xlABpWumYnTsfMYToaiaiK9k5wBEHiyWpR+xATHtY/QdB04t89/1O/w1cDnyilFU=",
                     "content-type: application/json"
