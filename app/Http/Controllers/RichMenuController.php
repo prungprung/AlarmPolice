@@ -14,7 +14,6 @@ class RichMenuController extends Controller
   }
   public function RichMenu(Request $request)
   {
-
     $postbody = $request->data;
     if ($postbody['status'] == "login") {
       $this->writrandread($postbody['userId']);
@@ -227,7 +226,7 @@ class RichMenuController extends Controller
     $data['userId.' . $length . ''] = $userid;
     // Write File
     $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
-
+    
     file_put_contents(base_path('resources/lang/en/en.json'), stripslashes($newJsonString));
   }
 }
