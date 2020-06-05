@@ -228,6 +228,7 @@ class RichMenuController extends Controller
     for ($i = 0; $i <= $lenght; $i++) {
       if($data['userId.'.$i] != $userid){
         echo "true";
+        exit();
         $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
         file_put_contents(base_path('resources/lang/en/en.json'), stripslashes($newJsonString));
       }
