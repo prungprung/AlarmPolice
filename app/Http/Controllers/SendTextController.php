@@ -14,7 +14,7 @@ class SendTextController extends Controller
     {
         $arrays = $this->readText();
         $lenght = count($arrays);
-        for ($i = 0; $i < $lenght; $i++){
+        for ($i = 0; $i < $lenght; $i++) {
             $curl = curl_init();
             echo strval($arrays['userId.' . $i]);
             $data = [
@@ -23,10 +23,10 @@ class SendTextController extends Controller
                     [
                         "type" => "text",
                         "text" => "อะไรนิ"
-                ]
+                    ]
                 ]
                     ];
-                    $urls = 'https://api.line.me/v2/bot/message/push';
+            $urls = 'https://api.line.me/v2/bot/message/push';
             curl_setopt_array($curl, array(
                 CURLOPT_URL => $urls,
                 CURLOPT_RETURNTRANSFER => true,

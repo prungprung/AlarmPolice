@@ -1,8 +1,9 @@
-
-[
-  "queryResult"=> [
-    "queryText"=> "what",
-    "parameters"=> [],
-    "languageCode"=> "th"
-  ]
-]
+{
+                "to" : "U4638e9a419fd8a40e2ee1164bda3145c",
+                "messages" : [
+                    {
+                        "type" : "text",
+                        "text" : "อะไรนิ"
+                    }
+                ]
+            };
