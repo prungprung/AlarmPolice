@@ -17,9 +17,9 @@ class SendTextController extends Controller
         $lenght = count($arrays);
         for ($i = 0; $i < $lenght; $i++) {
             $curl = curl_init();
-            echo strval($arrays['userId.' . $i]);
+            echo $arrays['userId.' . $i];
             $data = [
-                "to" => strval($arrays['userId.' . $i]),
+                "to" => $arrays['userId.' . $i],
                 "messages" => [
                     [
                         "type" => "text",
