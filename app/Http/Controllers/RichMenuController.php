@@ -219,8 +219,8 @@ class RichMenuController extends Controller
     echo $lineUserId;
     echo "----";
     // Read File
-    $jsonString = file_get_contents(base_path('/resources/lang/en/en.json'));
-    echo base_path('/resources/lang/en/en.json');
+    $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
+    echo base_path('resources/lang/en/en.json');
 
     $data = json_decode($jsonString, true);
 
@@ -234,7 +234,7 @@ class RichMenuController extends Controller
 
     $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
 
-    file_put_contents(base_path('/resources/lang/en/en.json'), stripslashes($newJsonString));
+    file_put_contents(base_path('resources/lang/en/en.json'), stripslashes($newJsonString));
 
 
   }
