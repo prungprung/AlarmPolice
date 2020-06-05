@@ -12,11 +12,13 @@ class RichMenuController extends Controller
   }
   public function RichMenu(Request $request)
   {
+    $results = DB::select('select * from user');
+    print_r($results);
     $postbody = $request->data;
+    echo $postbody;
+    exit();
     if ($postbody['status'] == "login") {
-      $results = DB::select('select * from user');
-      print_r($results);
-      exit();
+   
       DB::insert('insert into user (id, line_id,display_name,police_id) values (?,?,?)', [$postbody['userId'],'888','999']);
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
