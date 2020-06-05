@@ -15,10 +15,10 @@ class SendTextController extends Controller
         $arrays = $this->readText();
         $lenght = count($arrays);
         for ($i = 0; $i < $lenght; $i++){
-            echo gettype($arrays['userId.-' . $i]);
+            echo gettype($arrays['userId.' . $i]);
             $curl = curl_init();
             $data =[
-                "to" => strval($arrays['userId.-' . $i]),
+                "to" => strval($arrays['userId.' . $i]),
                 "messages" => [
                     [
                         "type" => "text",

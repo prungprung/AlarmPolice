@@ -221,7 +221,7 @@ class RichMenuController extends Controller
     // Read File
     $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
     $data = json_decode($jsonString, true);
-    $length = count($data) - 1;
+    $length = count($data);
     // Update Keyd
     $data['userId.' . $length . ''] = $userid;
     // Write File
