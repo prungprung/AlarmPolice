@@ -15,6 +15,8 @@ class RichMenuController extends Controller
     $postbody = $request->data;
     if ($postbody['status'] == "login") {
       $this->writrandread($postbody['userId']);
+      echo $postbody['userId'];
+      exit();
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [
@@ -214,6 +216,7 @@ class RichMenuController extends Controller
 
 
   public function writrandread($lineUserId){
+    echo $lineUserId;
     $jsonString = file_get_contents(base_path('/resources/lang/en/en.json'));
 
     $data = json_decode($jsonString, true);
