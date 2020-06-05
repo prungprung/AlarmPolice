@@ -14,7 +14,7 @@ class RichMenuController extends Controller
   {
     $postbody = $request->data;
     if ($postbody['status'] == "login") {
-     $resultSql= DB::insert('insert into user (line_id,display_name,police_id) values (?,?,?)', [$postbody['userId'],'888','999']);
+     $resultSql= DB::insert('insert into user (line_id,display_name,police_id) values (?,?,?)', [$postbody['userId'],888,999]);
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [
