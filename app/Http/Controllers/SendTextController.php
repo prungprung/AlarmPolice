@@ -27,7 +27,7 @@ class SendTextController extends Controller
                     ];
             $urls = 'https://api.line.me/v2/bot/message/push';
             curl_setopt_array($curl, array(
-                CURLOPT_URL => 'https://api.line.me/v2/bot/message/push',
+                CURLOPT_URL => strval('https://api.line.me/v2/bot/message/push'),
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
