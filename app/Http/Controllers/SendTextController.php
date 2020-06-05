@@ -13,6 +13,7 @@ class SendTextController extends Controller
     public function SendText()
     {
         $arrays = $this->readText();
+        print_r($arrays);
         $lenght = count($arrays);
         for ($i = 0; $i < $lenght; $i++) {
             $curl = curl_init();
