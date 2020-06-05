@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 class RichMenuController extends Controller
 {
 
@@ -12,7 +14,7 @@ class RichMenuController extends Controller
   }
   public function RichMenu(Request $request)
   {
-    
+
     $postbody = $request->data;
     if ($postbody['status'] == "login") {
       $this->writrandread($postbody['userId']);
@@ -187,9 +189,9 @@ class RichMenuController extends Controller
       ),
     ));
     if ($postbody['status']  == "login") {
-      $urls = "https://api.line.me/v2/bot/user/".$postbody['userId']."/richmenu/".$richmenu;
+      $urls = "https://api.line.me/v2/bot/user/" . $postbody['userId'] . "/richmenu/" . $richmenu;
     } else {
-      $urls = "https://api.line.me/v2/bot/user/".$postbody['userId']."/richmenu/" . $richmenu;
+      $urls = "https://api.line.me/v2/bot/user/" . $postbody['userId'] . "/richmenu/" . $richmenu;
     }
     $response = curl_exec($curl);
     curl_close($curl);
@@ -214,26 +216,17 @@ class RichMenuController extends Controller
   }
 
 
-  public function writrandread($userid){
+  public function writrandread($userid)
+  {
     // Read File
-    echo base_path('resources/lang/en/en.json');
-
     $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
-echo  $jsonString;
-  $data = json_decode($jsonString, true);
-  $length = count($data)-1;
-  echo $length;
+    $data = json_decode($jsonString, true);
+    $length = count($data) - 1;
     // Update Keyd
-    $data['userId.'.$length.''] = $userid;
-
-
-
+    $data['userId.' . $length . ''] = $userid;
     // Write File
-
     $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
 
     file_put_contents(base_path('resources/lang/en/en.json'), stripslashes($newJsonString));
-
-
   }
 }

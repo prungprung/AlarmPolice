@@ -11,6 +11,8 @@ class SendTextController extends Controller
     }
     public function SendText(Request $request)
     {
+        $this->readText();
+        exit();
         $postbody = $request->data;
         $curl = curl_init();
         $data =
@@ -38,5 +40,14 @@ class SendTextController extends Controller
                 "content-type: application/json"
             ),
         ));
+    }
+    public function readText()
+    {
+      // Read File
+      $jsonString = file_get_contents(base_path('resources/lang/en/en.json'));
+      $data = json_decode($jsonString, true);
+      $length = count($data) - 1;
+      print_r($data) ;
+     
     }
 }
