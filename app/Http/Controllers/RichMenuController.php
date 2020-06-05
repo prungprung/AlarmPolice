@@ -17,7 +17,6 @@ class RichMenuController extends Controller
     $postbody = $request->data;
     if ($postbody['status'] == "login") {
       $this->writrandread($postbody['userId']);
-      exit();
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [
