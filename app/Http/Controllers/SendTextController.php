@@ -36,6 +36,7 @@ class SendTextController extends Controller
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
                 CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "POST",
                 CURLOPT_POSTFIELDS => json_encode($data),
@@ -44,7 +45,6 @@ class SendTextController extends Controller
                     "content-type: application/json"
                 ),
             ));
-            exit();
         }
     }
     public function readText()
