@@ -15,11 +15,11 @@ class SendTextController extends Controller
         $arrays = $this->readText();
         print_r($arrays);
         $lenght = count($arrays);
+        $curl = curl_init();
         for ($i = 0; $i < $lenght; $i++) {
-            $curl = curl_init();
-            echo $arrays['userId.' . $i];
+            echo $arrays['userId.'.$i];
             $data = [
-                "to" => $arrays['userId.' . $i],
+                "to" => $arrays['userId.'.$i],
                 "messages" => [
                     [
                         "type" => "text",
@@ -27,7 +27,6 @@ class SendTextController extends Controller
                     ]
                 ]
                     ];
-                    echo json_encode($data);
 
             curl_setopt_array($curl, array(
                 CURLOPT_URL => "https://api.line.me/v2/bot/message/push",
@@ -43,7 +42,9 @@ class SendTextController extends Controller
                   "content-type: application/json"
                 ),
               ));
-        }
+        // }
+        $response = curl_exec($curl);
+        curl_close($curl);
     }
     public function readText()
     {
