@@ -18,7 +18,7 @@ class SendTextController extends Controller
             $curl = curl_init();
             echo strval($arrays['userId.' . $i]);
             $data = [
-                "to" => strval($arrays['userId.' . $i]),
+                "to" => "U4638e9a419fd8a40e2ee1164bda3145c",
                 "messages" => [
                     [
                         "type" => "text",
