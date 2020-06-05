@@ -11,42 +11,28 @@ class ChatBotController extends Controller
     }
     public function ChatBot()
     {
+        $method = $_SERVER['REQUEST_METHOD'];
+        if($method =='POST'){
+            $requestBody = file_get_contents('php://input');
+            $json = json_decode($requestBody);
 
-        $content = file_get_contents('php://input');
-        $events = json_decode($content, true);
-        $access_token = 'mCJv5+R/NzahU6FczR8quazO0HpzsjHUhj8ygOptTepkz4VLY7GJ25ZY/IbmT0zCliv4ryqsdstJkJ2XaAKleH10Oor5/RfLWvWpZ8G5Z85xlABpWumYnTsfMYToaiaiK9k5wBEHiyWpR+xATHtY/QdB04t89/1O/w1cDnyilFU=';
-        if (!is_null($events['events'])) {
-            foreach ($events['events'] as $event) {
-                return View('defaultview/defaultview');
-                if ($event['type'] == 'message') {
-                    $text = $event['source']['userId'];
-                    $replyToken = $event['replyToken'];
-                    if(stristr($text, 'hello') == TRUE){
-                        $text = 'Hello sir.Need anything help';
-                    }
-                    $messages = [
-                        'type' => 'text',
-                        'text' => $text
-                    ];
-                    $url = 'https://api.line.me/v2/bot/message/reply';
-                    $data = [
-                        'replyToken' => $replyToken,
-                        'messages' => $messages,
-                    ];
-                    $post = json_encode($data);
-                    $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-                    $ch = curl_init($url);
-                    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-                    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-                    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-                    $result = curl_exec($ch);
-                    curl_close($ch);
-                    echo $result . "\r\n";
-                }
+            $text = $json->queryResult->parameter->text;
+            switch($text){
+                case 'hi':
+                    $speech = 'hello boi';
+                    break;
+                default :
+                    $speech = 'default';
+                    break;
             }
+            $response = new \stdClass();
+            $response->speech = "";
+            $response->displayText = "";
+            $response->source = "webhook";
+            echo json_encode($response);
+
+        }else{
+            echo "Method not allowed";
         }
-        echo "OK";
     }
 }
