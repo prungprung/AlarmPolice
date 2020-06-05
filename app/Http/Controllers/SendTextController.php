@@ -23,7 +23,7 @@ class SendTextController extends Controller
                 "messages" => [
                     [
                         "type" => "text",
-                        "text" => "อะไรนิ"
+                        "text" => "hello"
                     ]
                 ]
                     ];
