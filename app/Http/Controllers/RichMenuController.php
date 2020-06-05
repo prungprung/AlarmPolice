@@ -12,14 +12,10 @@ class RichMenuController extends Controller
   }
   public function RichMenu(Request $request)
   {
-    $results = DB::select('select * from user');
-    print_r($results);
     $postbody = $request->data;
-    echo $postbody;
     exit();
     if ($postbody['status'] == "login") {
-   
-      DB::insert('insert into user (id, line_id,display_name,police_id) values (?,?,?)', [$postbody['userId'],'888','999']);
+      $this->writrandread($postbody['userId']);
       $dataFile = 'http://intense-scrubland-71413.herokuapp.com/public/image/linerichmenu_3_.jpeg';
       $data =  [
         "size" => [
@@ -215,5 +211,26 @@ class RichMenuController extends Controller
     $response = curl_exec($curl);
     $err = curl_error($curl);
     // return redirect('/defaultview');
+  }
+
+
+  public function writrandread($lineUserId){
+    $jsonString = file_get_contents(base_path('/resources/lang/en/en.json'));
+
+    $data = json_decode($jsonString, true);
+
+    // Update Key
+
+    $data['userId'] = $lineUserId;
+
+
+
+    // Write File
+
+    $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
+
+    file_put_contents(base_path('/resources/lang/en/en.json'), stripslashes($newJsonString));
+
+
   }
 }
