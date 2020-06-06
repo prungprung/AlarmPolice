@@ -230,10 +230,11 @@ class RichMenuController extends Controller
        $CheckDupicate++;
       }
     }
-    return view('defaultview/Checkvalue',compact('data'));
+    
     if($CheckDupicate != 0){
       $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
       file_put_contents(base_path('resources/lang/en/en.json'), stripslashes($newJsonString));
     }
+    return view('defaultview/Checkvalue',compact('CheckDupicate'));
   }
 }
